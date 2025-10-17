@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+---
+
+<Layout title="Activities | 3rd Butterworth Company">
+
+  <main class="mx-auto max-w-6xl px-4 pt-28 pb-20 sm:px-6 lg:px-8">
+    <section class="rounded-3xl bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 p-8 shadow-2xl sm:p-12">
+      <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-gold-400">Empowering Youth</p>
+          <h1 class="mt-4 text-3xl font-bold leading-tight text-white md:text-5xl">
+            Empowering Youth Through Holistic Development
+          </h1>
+          <p class="mt-6 text-base text-slate-200 md:text-lg">
+            At the 3rd Butterworth Company, we nurture young individuals into responsible leaders with
+            programs that focus on discipline, survival skills, community engagement, and leadership training.
+          </p>
+          <a
+            href="#core-activities"
+            class="mt-8 inline-flex items-center justify-center rounded-lg bg-gold-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-gold-600 focus:outline-none focus:ring-2 focus:ring-gold-300 focus:ring-offset-2 focus:ring-offset-slate-900"
+          >
+            Learn More
+          </a>
+        </div>
+        <div class="relative hidden overflow-hidden rounded-2xl bg-slate-950/40 shadow-inner lg:block">
+          <div class="absolute inset-0 bg-gradient-to-tr from-gold-500/20 via-transparent to-gold-400/10"></div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section id="core-activities" class="mt-16">
+      <div class="flex items-center justify-between gap-4">
+        <h2 class="text-2xl font-semibold text-white sm:text-3xl">Our Core Activities</h2>
+        <p class="hidden text-sm text-slate-400 sm:block">
+          Structured experiences shaping disciplined, compassionate leaders.
+        </p>
+      </div>
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,42 @@
+---
+import ProgramCard from './ProgramCard.astro';
+
+import myImage from '../assets/my-image.png';
+
+const programs = [
+  {
+    title: 'Badgework Program',
+    description: 'Earn badges through a structured program that covers various skills and knowledge areas, promoting personal achievement and recognition.',
+    image: '/',
+    alt: 'Boys in BB uniform with badges'
+  },
+  {
+    title: 'Company Band',
+    description: 'Participate in our Company Band, learning musical skills and performing at events, fostering creativity and teamwork.',
+    image: '/IMG_0392.JPG',
+    alt: 'Boys playing musical instruments in band uniform'
+  }
+];
+import '../styles/global.css';
+---
+
+<section class="py-16 sm:py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">Our Programs</h2>
+    </div>
+
+    <div class="mb-16">
+      <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Explore Our Activities</h3>
+      <p class="text-lg text-gray-700 max-w-3xl">
+        Engage in a variety of activities designed to foster personal development, teamwork, and leadership skills.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+      {programs.map(program => (
+        <ProgramCard {...program} />
+      ))}
+    </div>
+  </div>
+</section>
