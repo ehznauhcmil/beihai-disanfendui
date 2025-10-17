@@ -1,12 +1,265 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Person from '../../components/Person.astro';
 ---
 
-<Layout title="Badge">
-    <main class="mx-auto max-w-6xl px-4 pt-28 pb-20 sm:px-6 lg:px-8">
-        <div class="align-center flex justify-center items-center text-5xl font-bold text-white">
-            <h1>WORK IN PROGRESS</h1>
-        </div>
-    </main>
-    
+<Layout title="Leadership - 3rd Butterworth Company">
+  <main class="mx-auto max-w-6xl px-4 pt-28 pb-20 sm:px-6 lg:px-8">
+    <div class="mb-12 text-center bg-slate-800 p-4 rounded-2xl shadow-lg">
+      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-4">FOUNDER'S AWARD</h1>
+      <!-- <p class="text-lg text-slate-200 max-w-2xl mx-auto">
+        Meet the dedicated individuals who lead and inspire our company, fostering growth, discipline, and community spirit among our members.
+      </p> -->
+    </div>
+    <div class="grid gap-8 justify-items-center sm:grid-cols-2 lg:grid-cols-3 pb-8 sm:pb-4">
+      <div class="flex w-full justify-center">
+        <Person
+          name="Koh Hui Yee"
+          rank="Chaplain"
+          photoSrc="/headshots/oc/00_HY.jpg"
+          portfolio="Christian Education"
+          photoPosition="object-top"
+          photoScale="scale-105"
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="LUKE TENG"
+          rank="Captain"
+          photoSrc="/headshots/oc/01_LT.jpg"
+          portfolio="Quartermaster"
+          photoPosition="object-top"
+          photoScale="scale-105"
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="Daniel Woo"
+          rank="Honorary Captain"
+          photoSrc="/headshots/oc/02_DW.jpg"
+          portfolio="Christian Education"
+          photoPosition="object-top"
+          photoScale="scale-105"
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="SORVINE LIM"
+          rank="Lieutenant"
+          photoSrc="/headshots/oc/03_SL.jpg"
+          portfolio="Praise & Worship"
+          photoPosition="object-top"
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="JOCELYN TAI"
+          rank="Lieutenant"
+          photoSrc="/headshots/oc/03_JTai.jpg"
+          portfolio="Training"
+          photoPosition="object-top"
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="JOSEPH THAW"
+          rank="Lieutenant"
+          photoSrc="/headshots/oc/03_JThaw.jpg"
+          portfolio="Parade & Discipline"
+          photoScale='scale-110'
+          photoPosition="object-top"
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="jace lim"
+          rank="warrant officer"
+          photoSrc="/headshots/oc/04_JL.jpg"
+          portfolio="Training"
+          photoPosition="object-top"
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="Daniel Tan"
+          rank="warrant officer"
+          photoSrc="/headshots/oc/04_DT.jpg"
+          portfolio="Secretary"
+          photoScale='scale-105'
+          photoPosition="object-[0%_12%]"
+          photoRotate='rotate-4'
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="Lim Yong Fu"
+          rank="warrant officer"
+          photoSrc="/headshots/oc/04_YF.jpg"
+          portfolio="discipline"
+          photoPosition="object-[0%_15%]"
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="Lim Mei Qing"
+          rank="warrant officer"
+          photoSrc="/headshots/oc/04_MQ.jpg"
+          portfolio="Sections & Awards"
+          photoScale='scale-103'
+          photoPosition="object-[0%_12%]"
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="Lim Chuan Zhe"
+          rank="warrant officer"
+          photoSrc="/headshots/oc/04_CZ.jpg"
+          portfolio="Band, Tech & Media"
+          photoPosition="object-[0%_15%]"
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="Chayu Chun Wei"
+          rank="warrant officer"
+          photoSrc="/headshots/oc/04_CW.jpg"
+          portfolio="Band | Drummer's Section"
+          photoScale='scale-105'
+          photoPosition="object-top"
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="Ng Zhi Hui"
+          rank="warrant officer"
+          photoSrc="/headshots/oc/04_ZH.jpg"
+          portfolio="Special Events"
+          photoScale='scale-110'
+          photoPosition="object-[0%_10%]"
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="Kuan Chin Hou"
+          rank="warrant officer"
+          photoSrc="/headshots/oc/04_CH.jpg"
+          portfolio="Human Resources"
+          photoScale='scale-114'
+          photoPosition="object-[110%_-1%]"
+          photoRotate='-rotate-1'
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="Ong Qian Ying"
+          rank="warrant officer"
+          photoSrc="/headshots/oc/04_QY.jpg"
+          portfolio="Band | Piper's Section"
+          photoScale='scale-100'
+          photoPosition="object-[0%_10%]"
+        />
+      </div>
+    </div>
+    <div class="mb-12 text-center bg-slate-800 p-4 rounded-2xl shadow-lg">
+      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-4">Our Helpers</h1>
+      <p class="text-lg text-slate-200 max-w-2xl mx-auto">
+        The young supporters who provide lend their expertise in various fields.
+    </div>
+    <div class="grid gap-8 justify-items-center sm:grid-cols-2 lg:grid-cols-3">
+      <div class="flex w-full justify-center">
+        <Person
+          name="mahesweijzian"
+          rank="instructor"
+          photoSrc="/headshots/oc/10_WJ.jpg"
+          portfolio="band"
+          photoPosition="object-top"
+          photoScale="scale-112"
+          photoRotate='-rotate-1'
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="gan ern xin"
+          rank="instructor"
+          photoSrc="/headshots/oc/10_EX.jpg"
+          portfolio="Awards"
+          photoPosition="object-top"
+          photoScale="scale-105"
+          photoRotate='-rotate-1'
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="Ch'ng Chean Pei"
+          rank="Instructor"
+          photoSrc="/headshots/oc/10_CP.jpg"
+          portfolio="Discipline"
+          photoPosition="object-top"
+          photoScale="scale-105"
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="Chu Mei Xin"
+          rank="Instructor"
+          photoSrc="/headshots/oc/10_MX.jpg"
+          portfolio="Band"
+          photoPosition="object-top"
+          photoScale='scale-125'
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="Ong Qian Han"
+          rank="Instructor"
+          photoSrc="/headshots/oc/10_QH.jpg"
+          portfolio="Human Resources"
+          photoPosition="object-[0%_2.5%]"
+          photoScale='scale-120'
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="Cha Bing Hong"
+          rank="Instructor"
+          photoSrc="/headshots/oc/10_BH.jpg"
+          portfolio="Human Resources"
+          photoScale='scale-115'
+          photoPosition="object-top"
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="Jenny Poh"
+          rank="Instructor"
+          photoSrc="/headshots/oc/10_JP.jpg"
+          portfolio="Human Resources"
+          photoScale='scale-115'
+          photoPosition="object-top"
+          photoRotate='-rotate-2'
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="Renee Lim"
+          rank="Instructor"
+          photoSrc="/headshots/oc/10_RL.jpg"
+          portfolio="Human Resources"
+          photoScale='scale-125'
+          photoPosition="object-[0%_5%]"
+          photoRotate=''
+        />
+      </div>
+      <div class="flex w-full justify-center">
+        <Person
+          name="Chan Hui Yie"
+          rank="Instructor"
+          photoSrc="/headshots/oc/10_HY.jpg"
+          portfolio="Human Resources"
+          photoScale='scale-110'
+          photoPosition="object-[0%_10%]"
+        />
+      </div>
+    </div>
+  </main>
 </Layout>
