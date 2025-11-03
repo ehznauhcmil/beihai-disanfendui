@@ -2,7 +2,6 @@
 
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
-import ProgramsSection from '../components/ProgramsSection.astro';
 import NewsSection from '../components/NewsSection.astro';
 import '../styles/global.css';
 
@@ -32,54 +31,108 @@ const activityHighlights = [
 ---
 
 <Layout title="3rd Butterworth Company - Boys' Brigade Malaysia">
-  <Fragment>
-
-  </Fragment>
   <main>
     <Hero />
-    <section class="mx-auto max-w-6xl px-4 pt-20 sm:px-6 lg:px-8">
-      <div class="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
-        <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-100">Our Programs</p>
-          <h2 class="mt-2 text-3xl font-bold text-white sm:text-4xl">Explore Our Core Activities</h2>
-        </div>
-        <a
-          href="/activities"
-          class="inline-flex items-center gap-2 text-sm font-semibold text-slate-200 transition hover:text-gold-100 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-2 focus:ring-offset-slate-950"
-        >
-          View all activities
-          <span aria-hidden="true">→</span>
-        </a>
-      </div>
 
-      <div class="mt-10 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-        {activityHighlights.map(({ title, description, href, imageSrc, imageAlt }) => (
+    <!-- Programs Section -->
+    <section class="bg-white py-20 sm:py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
+            Our Core Activities
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover the programs that shape young leaders through discipline, faith, and service.
+          </p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {activityHighlights.map(({ title, description, href, imageSrc, imageAlt }) => (
+            <a
+              href={href}
+              class="group block overflow-hidden rounded-3xl bg-gray-50 transition-all hover:shadow-2xl hover:scale-[1.02]"
+            >
+              <div class="relative h-64 w-full overflow-hidden">
+                <img
+                  src={imageSrc}
+                  alt={imageAlt}
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-2">{title}</h3>
+                <p class="text-base text-gray-600 mb-4 leading-relaxed">{description}</p>
+                <span class="inline-flex items-center text-sm font-medium text-[#0071e3] group-hover:text-[#0077ed]">
+                  Learn more
+                  <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <div class="text-center mt-12">
           <a
-            href={href}
-            class="group flex flex-col overflow-hidden rounded-3xl border border-white/5 bg-slate-900/60 shadow-lg shadow-black/30 transition hover:-translate-y-1 hover:border-gold-400/40 hover:shadow-gold-500/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+            href="/activities"
+            class="inline-block bg-[#0071e3] text-white px-8 py-3.5 rounded-full font-medium text-base hover:bg-[#0077ed] transition-all hover:scale-105"
           >
-            <div class="relative h-48 w-full overflow-hidden">
-              <img
-                src={imageSrc}
-                alt={imageAlt}
-                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/0 to-transparent"></div>
-            </div>
-            <div class="flex flex-1 flex-col gap-3 p-6">
-              <h3 class="text-xl font-semibold text-white">{title}</h3>
-              <p class="text-sm text-slate-300">{description}</p>
-              <span class="mt-auto inline-flex items-center text-sm font-semibold text-white transition group-hover:text-gold-100">
-                Discover more
-                <span aria-hidden="true" class="ml-1 transition group-hover:translate-x-1">→</span>
-              </span>
-            </div>
+            View All Activities
           </a>
-        ))}
+        </div>
       </div>
     </section>
+
+    <!-- Values Section -->
+    <section class="bg-gray-50 py-20 sm:py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
+            Our Values
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Building character through faith, discipline, and service to the community.
+          </p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-3">
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#0071e3] text-white text-2xl font-bold mb-4">
+              1
+            </div>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Faith</h3>
+            <p class="text-base text-gray-600 leading-relaxed">
+              Grounded in Christian values, we nurture spiritual growth and moral development.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#0071e3] text-white text-2xl font-bold mb-4">
+              2
+            </div>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Discipline</h3>
+            <p class="text-base text-gray-600 leading-relaxed">
+              Through structured activities, we instill self-control, responsibility, and respect.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#0071e3] text-white text-2xl font-bold mb-4">
+              3
+            </div>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Service</h3>
+            <p class="text-base text-gray-600 leading-relaxed">
+              We empower young men to serve their community and make a positive impact.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <NewsSection />
   </main>
 </Layout>

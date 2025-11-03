@@ -2,11 +2,36 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="Badge">
-    <main class="mx-auto max-w-6xl px-4 pt-28 pb-20 sm:px-6 lg:px-8">
-        <div class="align-center flex justify-center items-center text-5xl font-bold text-white">
-            <h1>WORK IN PROGRESS</h1>
+<Layout title="Our Company - 3rd Butterworth Company">
+  <main class="bg-white">
+    <section class="pt-24 pb-20 px-6 sm:px-8 lg:px-12 min-h-[80vh] flex items-center justify-center">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gray-100 mb-8">
+          <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+          </svg>
         </div>
-    </main>
-    
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
+          Our Company
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+          This page is currently being developed. Check back soon to learn more about the 3rd Butterworth Company.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/"
+            class="inline-block bg-[#0071e3] text-white px-8 py-3.5 rounded-full font-medium text-base hover:bg-[#0077ed] transition-all hover:scale-105"
+          >
+            Go Home
+          </a>
+          <a
+            href="/about/leadership"
+            class="inline-block bg-gray-100 text-gray-900 px-8 py-3.5 rounded-full font-medium text-base hover:bg-gray-200 transition-all"
+          >
+            View Leadership
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>

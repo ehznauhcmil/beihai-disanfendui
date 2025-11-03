@@ -2,11 +2,85 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Badge">
-    <main class="mx-auto max-w-6xl px-4 pt-28 pb-20 sm:px-6 lg:px-8">
-        <div class="align-center flex justify-center items-center text-5xl font-bold text-white">
-            <h1>WORK IN PROGRESS</h1>
+<Layout title="Contact Us - 3rd Butterworth Company">
+  <main class="bg-white">
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 px-6 sm:px-8 lg:px-12 bg-gray-50">
+      <div class="mx-auto max-w-7xl text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
+          Get in Touch
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-20 px-6 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-8 md:grid-cols-3 mb-16">
+          <div class="text-center p-8 rounded-3xl bg-gray-50">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#0071e3] text-white mb-4">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Location</h3>
+            <p class="text-base text-gray-600">
+              Butterworth, Penang<br />
+              Malaysia
+            </p>
+          </div>
+
+          <div class="text-center p-8 rounded-3xl bg-gray-50">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#0071e3] text-white mb-4">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Email</h3>
+            <a href="mailto:info@3rdbutterworth.org" class="text-base text-[#0071e3] hover:text-[#0077ed]">
+              info@3rdbutterworth.org
+            </a>
+          </div>
+
+          <div class="text-center p-8 rounded-3xl bg-gray-50">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#0071e3] text-white mb-4">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Meeting Times</h3>
+            <p class="text-base text-gray-600">
+              Every Saturday<br />
+              2:00 PM - 5:00 PM
+            </p>
+          </div>
         </div>
-    </main>
-    
+
+        <!-- Contact Form Placeholder -->
+        <div class="max-w-2xl mx-auto">
+          <div class="rounded-3xl bg-gray-50 p-12 text-center">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gray-200 mb-6">
+              <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Contact Form Coming Soon</h3>
+            <p class="text-lg text-gray-600 mb-8">
+              We're working on a contact form. In the meantime, feel free to reach out via email or visit us during our meeting times.
+            </p>
+            <a
+              href="mailto:info@3rdbutterworth.org"
+              class="inline-block bg-[#0071e3] text-white px-8 py-3.5 rounded-full font-medium text-base hover:bg-[#0077ed] transition-all hover:scale-105"
+            >
+              Send Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>

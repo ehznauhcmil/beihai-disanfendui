@@ -21,28 +21,28 @@ const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.08,
       delayChildren: 0.1,
     },
   },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.4, 0.0, 0.2, 1] },
+    transition: { duration: 0.5, ease: [0.4, 0.0, 0.2, 1] },
   },
 };
 
 const LeadershipGrid: FC<Props> = ({ leaders, className = "" }) => {
   return (
     <motion.div
-      className={`grid gap-8 justify-items-center sm:grid-cols-2 lg:grid-cols-3 ${className}`}
+      className={`grid gap-6 sm:gap-8 justify-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ${className}`}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.1 }}
       variants={containerVariants}
     >
       {leaders.map(
@@ -64,8 +64,8 @@ const LeadershipGrid: FC<Props> = ({ leaders, className = "" }) => {
             className="flex w-full justify-center"
             variants={itemVariants}
           >
-            <article className="flex h-full w-full max-w-xs flex-col items-center gap-4 rounded-2xl border border-white/10 bg-slate-900/60 p-6 text-center shadow-lg shadow-black/30 backdrop-blur-md">
-              <div className="relative aspect-square w-full max-w-[8rem] overflow-hidden rounded-full border border-white/20 bg-slate-800/60 shadow-inner">
+            <article className="flex h-full w-full max-w-sm flex-col items-center gap-4 rounded-3xl bg-white border border-gray-200 p-6 text-center transition-all hover:shadow-xl hover:scale-[1.02]">
+              <div className="relative aspect-square w-full max-w-[9rem] overflow-hidden rounded-full bg-gray-100 shadow-md">
                 <img
                   src={photoSrc}
                   alt={photoAlt ?? `${name}'s portrait`}
@@ -81,19 +81,21 @@ const LeadershipGrid: FC<Props> = ({ leaders, className = "" }) => {
                   decoding="async"
                 />
               </div>
-              <h3 className="text-xl uppercase font-extrabold text-white">
-                {name}
-              </h3>
-              {rank && (
-                <p className="text-sm uppercase font-bold text-slate-300">
-                  {rank}
-                </p>
-              )}
-              {portfolio && (
-                <p className="text-sm uppercase font-semibold text-blue-500">
-                  {portfolio}
-                </p>
-              )}
+              <div className="space-y-1">
+                <h3 className="text-xl font-bold text-gray-900">
+                  {name}
+                </h3>
+                {rank && (
+                  <p className="text-sm font-medium text-gray-500 uppercase tracking-wide">
+                    {rank}
+                  </p>
+                )}
+                {portfolio && (
+                  <p className="text-sm font-medium text-[#0071e3]">
+                    {portfolio}
+                  </p>
+                )}
+              </div>
             </article>
           </motion.div>
         )
