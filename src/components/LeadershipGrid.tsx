@@ -64,7 +64,7 @@ const LeadershipGrid: FC<Props> = ({ leaders, className = "" }) => {
             className="flex w-full justify-center"
             variants={itemVariants}
           >
-            <article className="flex h-full w-full max-w-sm flex-col items-center gap-4 rounded-3xl bg-white border border-gray-200 p-6 text-center transition-all hover:shadow-xl hover:scale-[1.02]">
+            <article className="flex h-full w-full max-w-sm flex-col items-center gap-4 rounded-3xl bg-white border border-gray-200 p-6 text-center transition-shadow duration-300 hover:shadow-xl cursor-default">
               <div className="relative aspect-square w-full max-w-[9rem] overflow-hidden rounded-full bg-gray-100 shadow-md">
                 <img
                   src={photoSrc}

@@ -51,7 +51,7 @@ const activities = [
           {activities.map(({ title, description, href, icon }) => (
             <a
               href={href}
-              class="group block p-8 rounded-3xl bg-white border border-gray-200 transition-all hover:shadow-2xl hover:scale-[1.02]"
+              class="group block p-8 rounded-3xl bg-white border border-gray-200 transition-shadow duration-300 hover:shadow-2xl cursor-pointer"
             >
               <div class="flex items-start gap-6">
                 <div class="flex-shrink-0">
@@ -93,7 +93,7 @@ const activities = [
         </p>
         <a
           href="/contact"
-          class="inline-block bg-[#0071e3] text-white px-8 py-3.5 rounded-full font-medium text-base hover:bg-[#0077ed] transition-all hover:scale-105"
+          class="inline-block bg-[#0071e3] text-white px-8 py-3.5 rounded-full font-medium text-base hover:bg-[#0077ed] transition-colors duration-200 cursor-pointer"
         >
           Get in Touch
         </a>

@@ -36,7 +36,7 @@ const navLinks = [
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-14">
       <!-- Logo -->
-      <a href="/" class="flex items-center space-x-2 hover:opacity-70 transition-opacity">
+      <a href="/" class="flex items-center space-x-2 hover:opacity-70 transition-opacity cursor-pointer">
         <img
           src="/logo.png"
           alt="3rd Butterworth Company logo"
@@ -54,7 +54,7 @@ const navLinks = [
             <!-- Desktop Dropdown -->
             <div class="relative dropdown-container">
               <button
-                class="text-sm text-gray-700 hover:text-gray-900 font-normal py-2 flex items-center gap-1 dropdown-toggle transition-colors"
+                class="text-sm text-gray-700 hover:text-gray-900 font-normal py-2 flex items-center gap-1 dropdown-toggle transition-colors cursor-pointer"
                 aria-haspopup="true"
                 aria-expanded="false"
               >
@@ -74,7 +74,7 @@ const navLinks = [
                     <div class="relative nested-dropdown">
                       <button
                         type="button"
-                        class="flex w-full items-center justify-between px-4 py-2 text-left text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors nested-toggle"
+                        class="flex w-full items-center justify-between px-4 py-2 text-left text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors nested-toggle cursor-pointer"
                       >
                         {item.name}
                         <svg
@@ -90,7 +90,7 @@ const navLinks = [
                         {item.children.map(child => (
                           <a
                             href={child.href}
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors cursor-pointer"
                           >
                             {child.name}
                           </a>
@@ -100,7 +100,7 @@ const navLinks = [
                   ) : (
                     <a
                       href={item.href}
-                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors cursor-pointer"
                     >
                       {item.name}
                     </a>
@@ -112,7 +112,7 @@ const navLinks = [
             <!-- Regular Link -->
             <a
               href={link.href}
-              class="text-sm text-gray-700 hover:text-gray-900 font-normal py-2 transition-colors"
+              class="text-sm text-gray-700 hover:text-gray-900 font-normal py-2 transition-colors cursor-pointer"
             >
               {link.name}
             </a>
@@ -120,7 +120,7 @@ const navLinks = [
         ))}
         <a
           href="/join"
-          class="ml-2 rounded-full bg-[#0071e3] px-4 py-1.5 text-xs font-medium text-white transition-all hover:bg-[#0077ed]"
+          class="ml-2 rounded-full bg-[#0071e3] px-4 py-1.5 text-xs font-medium text-white transition-all hover:bg-[#0077ed] cursor-pointer"
         >
           Join Us
         </a>
@@ -129,7 +129,7 @@ const navLinks = [
       <!-- Mobile Menu Button -->
       <button
         id="mobile-menu-button"
-        class="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+        class="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors cursor-pointer"
         aria-label="Toggle menu"
       >
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -147,7 +147,7 @@ const navLinks = [
           <!-- Mobile Dropdown -->
           <div class="mobile-dropdown">
             <button
-              class="w-full text-left text-gray-700 hover:text-gray-900 font-medium py-2 flex items-center justify-between mobile-dropdown-toggle"
+              class="w-full text-left text-gray-700 hover:text-gray-900 font-medium py-2 flex items-center justify-between mobile-dropdown-toggle cursor-pointer"
             >
               {link.name}
               <svg
@@ -165,7 +165,7 @@ const navLinks = [
                   <div class="mobile-nested">
                     <button
                       type="button"
-                      class="flex w-full items-center justify-between text-left text-gray-600 hover:text-gray-900 py-2 mobile-nested-toggle"
+                      class="flex w-full items-center justify-between text-left text-gray-600 hover:text-gray-900 py-2 mobile-nested-toggle cursor-pointer"
                     >
                       {item.name}
                       <svg
@@ -181,7 +181,7 @@ const navLinks = [
                       {item.children.map(child => (
                         <a
                           href={child.href}
-                          class="block text-gray-500 hover:text-gray-900 py-2 text-sm"
+                          class="block text-gray-500 hover:text-gray-900 py-2 text-sm cursor-pointer"
                         >
                           {child.name}
                         </a>
@@ -191,7 +191,7 @@ const navLinks = [
                 ) : (
                   <a
                     href={item.href}
-                    class="block text-gray-600 hover:text-gray-900 py-2"
+                    class="block text-gray-600 hover:text-gray-900 py-2 cursor-pointer"
                   >
                     {item.name}
                   </a>
@@ -203,7 +203,7 @@ const navLinks = [
           <!-- Regular Mobile Link -->
           <a
             href={link.href}
-            class="block text-gray-700 hover:text-gray-900 font-medium py-2"
+            class="block text-gray-700 hover:text-gray-900 font-medium py-2 cursor-pointer"
           >
             {link.name}
           </a>
@@ -211,7 +211,7 @@ const navLinks = [
       ))}
       <a
         href="/join"
-        class="block rounded-full bg-[#0071e3] px-4 py-2 font-medium text-white hover:bg-[#0077ed] text-center mt-3 transition-all text-sm"
+        class="block rounded-full bg-[#0071e3] px-4 py-2 font-medium text-white hover:bg-[#0077ed] text-center mt-3 transition-all text-sm cursor-pointer"
       >
         Join Us
       </a>
