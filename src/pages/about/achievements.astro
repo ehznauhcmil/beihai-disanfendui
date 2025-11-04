@@ -1,125 +1,256 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import LeadershipGrid from '../../components/LeadershipGrid';
+import PeopleGrid from '../../components/PeopleGrid';
 
 const foundersAward = [
   {
-    name: 'Koh Hui Yee',
-    rank: 'Chaplain',
-    photoSrc: '/headshots/oc/00_HY.jpg',
-    portfolio: 'Christian Education',
+    name: 'ONG QIAN YING',
+    rank: 'WARRANT OFFICER',
+    photoSrc: '/headshots/oc/02_QYing.jpg',
+    portfolio: "2023",
+    photoPosition: 'object-top',
+    photoScale: 'scale-110'
+  },
+  {
+    name: 'KUAN CHIN HOU',
+    rank: 'warrant officer',
+    photoSrc: '/headshots/oc/02_CHou.jpg',
+    portfolio: '2023',
     photoPosition: 'object-[0%_10%]',
+    photoScale: 'scale-110',
+    photoRotate: '-rotate-1'
+  },
+  
+  {
+    name: 'LIM CHUAN ZHE',
+    rank: 'warrant officer',
+    photoSrc: '/headshots/oc/02_CZhe.jpg',
+    portfolio: '2022',
+    photoPosition: 'object-top',
+    photoScale: 'scale-105'
+  },
+  {
+    name: 'LIM MEI QING',
+    rank: 'warrant officer',
+    photoSrc: '/headshots/oc/02_MQing.jpg',
+    portfolio: '2017',
+    photoPosition: 'object-top',
+    photoScale: 'scale-110'
+  },
+  {
+    name: 'LIM YONG FU',
+    rank: 'warrant officer',
+    photoSrc: '/headshots/oc/02_YFu.jpg',
+    portfolio: '2017',
+    photoPosition:'object-top',
+    photoScale:'scale-110'
+  },
+  {
+    name: 'Daniel Tan',
+    rank: 'WARRANT OFFICER',
+    photoSrc: '/headshots/oc/02_DTan.jpg',
+    portfolio: '2017',
+    photoPosition: 'object-[50%_0%]',
+    photoScale: 'scale-125',
+  },
+  {
+    name: 'LEE SANG YU',
+    rank: 'CORPORAL (DISCHARGED)',
+    photoSrc: '/headshots/honorroll/SYu.jpg',
+    portfolio: '2017',
+    photoPosition: 'object-[0%_10%]',
+    photoScale: 'scale-120'
+  },
+  {
+    name: 'LUKE TENG',
+    rank: 'Captain',
+    photoSrc: '/headshots/oc/01_LTeng.jpg',
+    portfolio: '2012',
+    photoPosition: 'object-top',
+    photoScale: 'scale-110'
+  },
+  {
+    name: 'JOCELYN TAI',
+    rank: 'Lieutenant',
+    photoSrc: '/headshots/oc/01_JTai.jpg',
+    portfolio: '2011',
+    photoPosition: 'object-top',
+    photoScale: 'scale-120',
+    photoRotate: '-rotate-1'
+  },
+];
+
+const presidentsAward = [
+  {
+    name: 'ONG QIAN YING',
+    rank: 'WARRANT OFFICER',
+    photoSrc: '/headshots/oc/02_QYing.jpg',
+    portfolio: "2022",
+    photoPosition: 'object-top',
+    photoScale: 'scale-110'
+  },
+  {
+    name: 'KUAN CHIN HOU',
+    rank: 'warrant officer',
+    photoSrc: '/headshots/oc/02_CHou.jpg',
+    portfolio: '2022',
+    photoPosition: 'object-[0%_10%]',
+    photoScale: 'scale-110',
+    photoRotate: '-rotate-1'
+  },
+  {
+    name: 'YEOH KHA HOONG',
+    rank: 'SERGEANT (DISCHARGED)',
+    photoSrc: '/headshots/honorroll/KHoong.jpg',
+    portfolio: "2021",
+    photoPosition: 'object-[0%_20%]',
+    photoScale: 'scale-110'
+  },
+  {
+    name: 'CINDY BEH',
+    rank: 'STAFF SERGEANT (DISCHARGED)',
+    photoSrc: '/headshots/honorroll/CBeh.jpg',
+    portfolio: "2020",
+    photoPosition: 'object-[0%_5%]',
+    photoScale: 'scale-115'
+  },
+  {
+    name: 'JESSICA TAN',
+    rank: 'SERGEANT (DISCHARGED)',
+    photoSrc: '/headshots/honorroll/JTan.jpg',
+    portfolio: "2019",
+    photoPosition: 'object-[0%_15%]',
+    photoScale: 'scale-100'
+  },
+  {
+    name: 'MAHESWEIJZIAN',
+    rank: 'INSTRUCTOR',
+    photoSrc: '/headshots/oc/03_WJian.jpg',
+    portfolio: "2019",
+    photoPosition: 'object-top',
+    photoScale: 'scale-125',
+  },
+  {
+    name: 'LIM CHUAN ZHE',
+    rank: 'warrant officer',
+    photoSrc: '/headshots/oc/02_CZhe.jpg',
+    portfolio: '2019',
+    photoPosition: 'object-top',
+    photoScale: 'scale-105'
+  },
+  {
+    name: 'LIM MEI QING',
+    rank: 'warrant officer',
+    photoSrc: '/headshots/oc/02_MQing.jpg',
+    portfolio: '2017',
+    photoPosition: 'object-top',
+    photoScale: 'scale-110'
+  },
+  {
+    name: 'JACE LIM',
+    rank: 'warrant officer',
+    photoSrc: '/headshots/oc/02_SYing.jpg',
+    portfolio: '2016',
+    photoPosition: 'object-top',
+    photoScale:'scale-110'
+  },
+  {
+    name: 'LIM XIN HUI',
+    rank: 'SERGEANT (DISCHARGED)',
+    photoSrc: '/headshots/honorroll/XHui.jpg',
+    portfolio: "2016",
+    photoPosition: 'object-top',
+    photoScale: 'scale-130'
+  },
+  {
+    name: 'TOH LI HOONG',
+    rank: 'CORPORAL (DISCHARGED)',
+    photoSrc: '/headshots/honorroll/LHoong.jpg',
+    portfolio: "2016",
+    photoPosition: 'object-top',
+    photoScale: 'scale-140'
+  },
+  {
+    name: 'LIM YONG FU',
+    rank: 'warrant officer',
+    photoSrc: '/headshots/oc/02_YFu.jpg',
+    portfolio: '2017',
+    photoPosition:'object-top',
+    photoScale:'scale-110'
+  },
+  {
+    name: 'DANIEL TAN',
+    rank: 'WARRANT OFFICER',
+    photoSrc: '/headshots/oc/02_DTan.jpg',
+    portfolio: '2015',
+    photoPosition: 'object-[50%_0%]',
+    photoScale: 'scale-125',
+  },
+  {
+    name: 'LEE SANG YU',
+    rank: 'CORPORAL (DISCHARGED)',
+    photoSrc: '/headshots/honorroll/SYu.jpg',
+    portfolio: '2015',
+    photoPosition: 'object-[0%_10%]',
+    photoScale: 'scale-120'
+  },
+  {
+    name: 'VICTOR SOON',
+    rank: 'CORPORAL (DISCHARGED)',
+    photoSrc: '/headshots/honorroll/TYan.jpg',
+    portfolio: "2012",
+    photoPosition: 'object-top',
     photoScale: 'scale-110'
   },
   {
     name: 'LUKE TENG',
     rank: 'Captain',
-    photoSrc: '/headshots/oc/01_LT.jpg',
-    portfolio: 'Quartermaster',
+    photoSrc: '/headshots/oc/01_LTeng.jpg',
+    portfolio: '2011',
     photoPosition: 'object-top',
-    photoScale: 'scale-105'
+    photoScale: 'scale-110'
   },
   {
-    name: 'Daniel Woo',
-    rank: 'Honorary Captain',
-    photoSrc: '/headshots/oc/02_DW.jpg',
-    portfolio: 'Christian Education',
+    name: 'JOSHUA CHAN',
+    rank: 'SERGEANT (DISCHARGED)',
+    photoSrc: '/headshots/general/user.png',
+    portfolio: "2010",
     photoPosition: 'object-top',
-    photoScale: 'scale-105'
-  },
-  {
-    name: 'SORVINE LIM',
-    rank: 'Lieutenant',
-    photoSrc: '/headshots/oc/03_SL.jpg',
-    portfolio: 'Praise & Worship',
-    photoPosition: 'object-top'
+    photoScale: 'scale-110'
   },
   {
     name: 'JOCELYN TAI',
     rank: 'Lieutenant',
-    photoSrc: '/headshots/oc/03_JTai.jpg',
-    portfolio: 'Training',
-    photoPosition: 'object-top'
-  },
-  {
-    name: 'JOSEPH THAW',
-    rank: 'Lieutenant',
-    photoSrc: '/headshots/oc/03_JThaw.jpg',
-    portfolio: 'Parade & Discipline',
+    photoSrc: '/headshots/oc/01_JTai.jpg',
+    portfolio: '2009',
     photoPosition: 'object-top',
-    photoScale: 'scale-110'
-  },
-  {
-    name: 'jace lim',
-    rank: 'warrant officer',
-    photoSrc: '/headshots/oc/04_JL.jpg',
-    portfolio: 'Training',
-    photoPosition: 'object-top'
-  },
-  {
-    name: 'Daniel Tan',
-    rank: 'warrant officer',
-    photoSrc: '/headshots/oc/04_DT.jpg',
-    portfolio: 'Secretary',
-    photoPosition: 'object-[0%_12%]',
-    photoScale: 'scale-105',
-    photoRotate: 'rotate-4'
-  },
-  {
-    name: 'Lim Yong Fu',
-    rank: 'warrant officer',
-    photoSrc: '/headshots/oc/04_YF.jpg',
-    portfolio: 'Discipline',
-    photoPosition: 'object-[0%_15%]'
-  },
-  {
-    name: 'Lim Mei Qing',
-    rank: 'warrant officer',
-    photoSrc: '/headshots/oc/04_MQ.jpg',
-    portfolio: 'Sections & Awards',
-    photoPosition: 'object-[0%_12%]',
-    photoScale: 'scale-103'
-  },
-  {
-    name: 'Lim Chuan Zhe',
-    rank: 'warrant officer',
-    photoSrc: '/headshots/oc/04_CZ.jpg',
-    portfolio: 'Band, Tech & Media',
-    photoPosition: 'object-[0%_15%]'
-  },
-  {
-    name: 'Chayu Chun Wei',
-    rank: 'warrant officer',
-    photoSrc: '/headshots/oc/04_CW.jpg',
-    portfolio: "Band | Drummer's Section",
-    photoPosition: 'object-top',
-    photoScale: 'scale-105'
-  },
-  {
-    name: 'Ng Zhi Hui',
-    rank: 'warrant officer',
-    photoSrc: '/headshots/oc/04_ZH.jpg',
-    portfolio: 'Special Events',
-    photoPosition: 'object-[0%_10%]',
-    photoScale: 'scale-110'
-  },
-  {
-    name: 'Kuan Chin Hou',
-    rank: 'warrant officer',
-    photoSrc: '/headshots/oc/04_CH.jpg',
-    portfolio: 'Human Resources',
-    photoPosition: 'object-[110%_-1%]',
-    photoScale: 'scale-114',
+    photoScale: 'scale-120',
     photoRotate: '-rotate-1'
   },
   {
-    name: 'Ong Qian Ying',
-    rank: 'warrant officer',
-    photoSrc: '/headshots/oc/04_QY.jpg',
-    portfolio: "Band | Piper's Section",
-    photoPosition: 'object-[0%_10%]',
-    photoScale: 'scale-100'
-  }
+    name: 'SORVINE LIM',
+    rank: 'Lieutenant',
+    photoSrc: '/headshots/oc/01_SLim.jpg',
+    portfolio: '2003',
+    photoPosition: 'object-top',
+    photoScale: 'scale-120'
+  },
+  {
+    name: 'LEANA LIM',
+    rank: 'CORPORAL (DISCHARGED)',
+    photoSrc: '/headshots/general/user.png',
+    portfolio: "2003",
+    photoPosition: 'object-top',
+    photoScale: 'scale-110'
+  },
+  {
+    name: 'BRYANT LIM',
+    rank: 'CORPORAL (DISCHARGED)',
+    photoSrc: '/headshots/general/user.png',
+    portfolio: "2003",
+    photoPosition: 'object-top',
+    photoScale: 'scale-110'
+  },
 ];
 ---
 
@@ -148,7 +279,21 @@ const foundersAward = [
             The highest honor in The Boys' Brigade, recognizing exceptional dedication and service.
           </p>
         </div>
-        <LeadershipGrid leaders={foundersAward} client:load />
+        <PeopleGrid person={foundersAward} client:load />
+      </div>
+    </section>
+    <section class="py-16 px-6 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-7xl">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+            President's Award Recipients
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            The second highest honor in The Boys' Brigade, recognizing exceptional dedication and service.
+          </p>
+          
+        </div>
+        <PeopleGrid person={presidentsAward} client:load />
       </div>
     </section>
   </main>

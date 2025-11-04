@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { motion } from "framer-motion";
 
-type Leader = {
+type Person = {
   name: string;
   rank?: string;
   portfolio?: string;
@@ -13,7 +13,7 @@ type Leader = {
 };
 
 type Props = {
-  leaders: Leader[];
+  person: Person[];
   className?: string;
 };
 
@@ -36,7 +36,7 @@ const itemVariants = {
   },
 };
 
-const LeadershipGrid: FC<Props> = ({ leaders, className = "" }) => {
+const PeopleGrid: FC<Props> = ({ person, className = "" }) => {
   return (
     <motion.div
       className={`grid gap-6 sm:gap-8 justify-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ${className}`}
@@ -45,7 +45,7 @@ const LeadershipGrid: FC<Props> = ({ leaders, className = "" }) => {
       viewport={{ once: true, amount: 0.1 }}
       variants={containerVariants}
     >
-      {leaders.map(
+      {person.map(
         (
           {
             name,
@@ -82,7 +82,7 @@ const LeadershipGrid: FC<Props> = ({ leaders, className = "" }) => {
                 />
               </div>
               <div className="space-y-1">
-                <h3 className="text-xl font-bold text-gray-900">
+                <h3 className="text-xl font-bold uppercase text-gray-900">
                   {name}
                 </h3>
                 {rank && (
@@ -104,4 +104,4 @@ const LeadershipGrid: FC<Props> = ({ leaders, className = "" }) => {
   );
 };
 
-export default LeadershipGrid;
+export default PeopleGrid;
