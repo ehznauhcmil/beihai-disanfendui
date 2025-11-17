@@ -39,7 +39,7 @@ const itemVariants = {
 const PeopleGrid: FC<Props> = ({ person, className = "" }) => {
   return (
     <motion.div
-      className={`grid gap-6 sm:gap-8 justify-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ${className}`}
+      className={`grid grid-cols-2 gap-6 sm:gap-8 justify-items-center lg:grid-cols-3 xl:grid-cols-4 ${className}`}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
