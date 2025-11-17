@@ -1,131 +1,122 @@
 ---
-import { Facebook, Instagram } from 'simple-icons-astro'
 const currentYear = new Date().getFullYear();
 
 const footerLinks = {
   about: [
     { name: 'Our History', href: '/about/history' },
     { name: 'Leadership', href: '/about/leadership' },
-    { name: 'Mission & Values', href: '/about/mission' },
+    { name: 'Our Company', href: '/about/company' },
     { name: 'Join Us', href: '/join' },
   ],
   programs: [
-    { name: 'Badgework Program', href: '/activities/badgework' },
+    { name: 'Badgework', href: '/activities/badge' },
     { name: 'Company Band', href: '/activities/band' },
-    { name: 'Physical Training', href: '/activities/physical-training' },
+    { name: 'Skills Training', href: '/activities/skills' },
     { name: 'Camps & Events', href: '/activities/camps' },
   ],
   resources: [
-    { name: 'News & Updates', href: '/news' },
-    { name: 'Photo Gallery', href: '/news/gallery' },
-    { name: 'Downloads', href: '/resources/downloads' },
-    { name: 'FAQ', href: '/resources/faq' },
+    { name: 'Activities', href: '/activities' },
+    { name: 'Achievements', href: '/about/achievements' },
+    { name: 'Contact', href: '/contact' },
   ],
 };
-
 ---
 
-<footer class="bg-gray-900 text-gray-300">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<footer class="bg-gray-50 border-t border-gray-200">
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
     <!-- Main Footer Content -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
-      
-      <!-- Company Info -->
-      <div class="lg:col-span-2">
-        <div class="flex items-center space-x-2 mb-4">
-          <div class="w-10 h-10 bg-white flex items-center justify-center rounded">
-            <span class="text-gray-900 font-bold">BB</span>
+    <div class="py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+
+        <!-- Company Info -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center space-x-2 mb-4">
+            <img
+              src="/logo.png"
+              alt="3rd Butterworth Company logo"
+              class="h-8 w-auto"
+              loading="lazy"
+            />
+            <span class="font-semibold text-gray-900 text-base">3rd Butterworth</span>
           </div>
-          <span class="font-semibold text-white text-lg">3rd Butterworth Company</span>
+          <p class="text-sm text-gray-600 mb-6 max-w-sm leading-relaxed">
+            Nurturing young men through faith-based activities, disciplined training, and community service. Sure and Steadfast.
+          </p>
         </div>
-        <p class="text-sm mb-4 text-gray-400 max-w-sm">
-          Nurturing young men through faith-based activities, disciplined training, and community service since 1883. Sure and Steadfast.
-        </p>
-        
-        <!-- Social Media Links -->
-        <!-- <div class="flex space-x-4">
-          <a href="https://www.facebook.com/3rdbutterworth" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="Visit our Facebook page">
-            <Facebook />
-          </a>
-          <a href="https://www.instagram.com/03btw/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="Visit our Facebook page">
-            <Instagram />
-          </a>
-        </div> -->
-      </div>
 
-      <!-- About Links -->
-      <div>
-        <h3 class="text-white font-semibold mb-4">About</h3>
-        <ul class="space-y-2">
-          {footerLinks.about.map(link => (
-            <li>
-              <a 
-                href={link.href} 
-                class="text-sm hover:text-white transition-colors"
-              >
-                {link.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+        <!-- About Links -->
+        <div>
+          <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">About</h3>
+          <ul class="space-y-3">
+            {footerLinks.about.map(link => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-sm text-gray-600 hover:text-gray-900 transition-colors cursor-pointer"
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-      <!-- Programs Links -->
-      <div>
-        <h3 class="text-white font-semibold mb-4">Programs</h3>
-        <ul class="space-y-2">
-          {footerLinks.programs.map(link => (
-            <li>
-              <a 
-                href={link.href} 
-                class="text-sm hover:text-white transition-colors"
-              >
-                {link.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+        <!-- Programs Links -->
+        <div>
+          <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">Programs</h3>
+          <ul class="space-y-3">
+            {footerLinks.programs.map(link => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-sm text-gray-600 hover:text-gray-900 transition-colors cursor-pointer"
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-      <!-- Resources Links -->
-      <div>
-        <h3 class="text-white font-semibold mb-4">Resources</h3>
-        <ul class="space-y-2">
-          {footerLinks.resources.map(link => (
-            <li>
-              <a 
-                href={link.href} 
-                class="text-sm hover:text-white transition-colors"
-              >
-                {link.name}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <!-- Resources Links -->
+        <div>
+          <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">Resources</h3>
+          <ul class="space-y-3">
+            {footerLinks.resources.map(link => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-sm text-gray-600 hover:text-gray-900 transition-colors cursor-pointer"
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
 
     <!-- Contact Info -->
-    <div class="border-t border-gray-800 pt-8 mb-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="border-t border-gray-200 py-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <div>
-          <h4 class="text-white font-medium mb-2">Location</h4>
-          <p class="text-sm text-gray-400">
-            123 Church Street<br />
+          <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Location</h4>
+          <p class="text-sm text-gray-600 leading-relaxed">
             Butterworth, Penang<br />
             Malaysia
           </p>
         </div>
         <div>
-          <h4 class="text-white font-medium mb-2">Contact</h4>
-          <p class="text-sm text-gray-400">
+          <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Contact</h4>
+          <p class="text-sm text-gray-600 leading-relaxed">
             Email: info@3rdbutterworth.org<br />
             Phone: +60 12-345 6789
           </p>
         </div>
         <div>
-          <h4 class="text-white font-medium mb-2">Meeting Times</h4>
-          <p class="text-sm text-gray-400">
+          <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Meeting Times</h4>
+          <p class="text-sm text-gray-600 leading-relaxed">
             Every Saturday<br />
             2:00 PM - 5:00 PM
           </p>
@@ -134,17 +125,19 @@ const footerLinks = {
     </div>
 
     <!-- Bottom Bar -->
-    <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-      <p class="text-sm text-gray-400 mb-4 md:mb-0">
-        © {currentYear} 3rd Butterworth Company, The Boys' Brigade Malaysia. All rights reserved.
-      </p>
-      <div class="flex space-x-6">
-        <a href="/privacy" class="text-sm text-gray-400 hover:text-white transition-colors">
-          Privacy Policy
-        </a>
-        <a href="/terms" class="text-sm text-gray-400 hover:text-white transition-colors">
-          Terms of Service
-        </a>
+    <div class="border-t border-gray-200 py-6">
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-gray-500">
+          © {currentYear} 3rd Butterworth Company, The Boys' Brigade Malaysia. All rights reserved.
+        </p>
+        <div class="flex space-x-6">
+          <a href="/privacy" class="text-xs text-gray-500 hover:text-gray-900 transition-colors">
+            Privacy Policy
+          </a>
+          <a href="/terms" class="text-xs text-gray-500 hover:text-gray-900 transition-colors">
+            Terms of Service
+          </a>
+        </div>
       </div>
     </div>
   </div>

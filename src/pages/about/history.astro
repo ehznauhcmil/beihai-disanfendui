@@ -2,11 +2,36 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="Badge">
-    <main class="mx-auto max-w-6xl px-4 pt-28 pb-20 sm:px-6 lg:px-8">
-        <div class="align-center flex justify-center items-center text-5xl font-bold text-white">
-            <h1>WORK IN PROGRESS</h1>
+<Layout title="History - 3rd Butterworth Company">
+  <main class="bg-white">
+    <section class="pt-24 pb-20 px-6 sm:px-8 lg:px-12 min-h-[80vh] flex items-center justify-center">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gray-100 mb-8">
+          <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
         </div>
-    </main>
-    
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
+          Our History
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+          This page is currently being developed. Check back soon to learn about the rich history of the 3rd Butterworth Company.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/"
+            class="inline-block bg-[#0071e3] text-white px-8 py-3.5 rounded-full font-medium text-base hover:bg-[#0077ed] transition-colors duration-200 cursor-pointer"
+          >
+            Go Home
+          </a>
+          <a
+            href="/about/leadership"
+            class="inline-block bg-gray-100 text-gray-900 px-8 py-3.5 rounded-full font-medium text-base hover:bg-gray-200 transition-colors duration-200 cursor-pointer"
+          >
+            View Leadership
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>

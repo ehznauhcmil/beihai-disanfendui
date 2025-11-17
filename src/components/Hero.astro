@@ -2,30 +2,45 @@
 import '../styles/global.css';
 ---
 
-<section class="relative min-h-screen overflow-hidden">
+<section class="relative min-h-screen overflow-hidden bg-white">
   <div class="absolute inset-0">
-    <img 
-      src="/IMG_0427.JPG" 
-      alt="Boys' Brigade members in uniform" 
-      class="w-full h-full object-cover object-center"
+    <img
+      src="/IMG_0427.JPG"
+      alt="Boys' Brigade members in uniform"
+      class="w-full h-full object-cover object-center opacity-95"
     />
-    <div class="absolute inset-0 bg-slate-950/70 backdrop-blur-[2px]"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-white/60"></div>
   </div>
 
-  <div class="relative flex min-h-screen items-center">
-    <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-        Steadfast in Faith, Discipline, and Service
+  <div class="relative flex min-h-screen items-center justify-center pt-20 pb-16">
+    <div class="mx-auto max-w-5xl px-6 text-center">
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight tracking-tight">
+        Steadfast in Faith,<br class="hidden sm:block"/> Discipline, and Service
       </h1>
-      <p class="text-lg sm:text-xl text-white mb-8 leading-relaxed max-w-3xl mx-auto">
-        The 3rd Butterworth Company of The Boys' Brigade in Malaysia is dedicated to nurturing young men through faith-based activities, disciplined training, and community service. Our motto, 'Sure and Steadfast,' guides our commitment to personal growth and service to others.
+      <p class="text-xl sm:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto font-light">
+        Nurturing young men through faith-based activities, disciplined training, and community service.
       </p>
-      <a 
-        href="/activities" 
-        class="inline-block bg-blue-600 text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg"
-      >
-        Learn More
-      </a>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a
+          href="/activities"
+          class="inline-block bg-[#0071e3] text-white px-8 py-3.5 rounded-full font-medium text-base hover:bg-[#0077ed] transition-colors duration-200 shadow-lg cursor-pointer"
+        >
+          Explore Activities
+        </a>
+        <a
+          href="/about/company"
+          class="inline-block bg-white/10 backdrop-blur-sm text-white border border-white/30 px-8 py-3.5 rounded-full font-medium text-base hover:bg-white/20 transition-colors duration-200 cursor-pointer"
+        >
+          Learn More
+        </a>
+      </div>
     </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+    </svg>
   </div>
 </section>

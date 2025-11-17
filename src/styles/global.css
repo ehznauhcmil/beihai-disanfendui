@@ -3,10 +3,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --apple-blue: #0071e3;
+  --apple-blue-hover: #0077ed;
+  --apple-gray: #f5f5f7;
+  --apple-dark: #1d1d1f;
+  --apple-text-gray: #86868b;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
 body {
   font-family: inherit;
+  background: #fff;
+  color: var(--apple-dark);
+}
+
+/* Apple-style smooth animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apple-style section spacing */
+.apple-section {
+  padding: 60px 20px;
+}
+
+@media (min-width: 768px) {
+  .apple-section {
+    padding: 100px 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .apple-section {
+    padding: 120px 60px;
+  }
 }
