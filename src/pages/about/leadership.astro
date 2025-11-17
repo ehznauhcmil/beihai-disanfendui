@@ -4,14 +4,16 @@ import PeopleGrid from '../../components/PeopleGrid';
 import type { PeopleCollection } from '../../data/types';
 
 // Import data from JSON files
-import leadershipData from '../../data/leadership/leadership-team.json';
-import helpersData from '../../data/leadership/helpers-team.json';
+import leadershipData from '../../data/leadership/officer-team.json';
+import helpersData from '../../data/leadership/helper-team.json';
+import ncoData from '../../data/leadership/nco-team.json';
 
 const leadershipTeam = (leadershipData as PeopleCollection).people;
 const helperTeam = (helpersData as PeopleCollection).people;
+const ncoTeam = (ncoData as PeopleCollection).people;
 ---
 
-<Layout title="Leadership - 3rd Butterworth Company">
+<Layout title="Leadership - 3rd Butterworth Company">x
   <main class="bg-white">
     <!-- Hero Section -->
     <section class="pt-24 pb-16 px-6 sm:px-8 lg:px-12 bg-gray-50">
@@ -34,18 +36,39 @@ const helperTeam = (helpersData as PeopleCollection).people;
     </section>
 
     <!-- Helpers Section -->
-    <section class="py-16 px-6 sm:px-8 lg:px-12 bg-gray-50">
-      <div class="mx-auto max-w-7xl">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+    <section class="pt-24 pb-16 px-6 sm:px-8 lg:px-12 bg-gray-50">
+      <div class="mx-auto max-w-7xl text-center">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
             Our Helpers
-          </h2>
+          </h1>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             The young supporters who lend their expertise across music, events, and operations to
             keep our company thriving.
           </p>
-        </div>
-        <PeopleGrid person={helperTeam} client:load />
+      </div>
+    </section>
+
+    <section class="py-16 px-6 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-7xl">
+        <PeopleGrid person={helperTeam} className="pb-8 sm:pb-4" client:load />
+      </div>
+    </section>
+
+    <!-- NCO Section -->
+    <section class="pt-24 pb-16 px-6 sm:px-8 lg:px-12 bg-gray-50">
+      <div class="mx-auto max-w-7xl text-center">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
+            Our Young Leaders
+          </h1>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            The aspiring leaders who carry out the main operations of the company under the guidance of our officers 
+          </p>
+      </div>
+    </section>
+
+    <section class="py-16 px-6 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-7xl">
+        <PeopleGrid person={ncoTeam} className="pb-8 sm:pb-4" client:load />
       </div>
     </section>
   </main>
