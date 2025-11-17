@@ -1,0 +1,79 @@
+{
+  "category": "Helpers Team",
+  "description": "The young supporters who lend their expertise across music, events, and operations",
+  "lastUpdated": "2025-11-17",
+  "people": [
+    {
+      "name": "MAHESWEIJZIAN",
+      "rank": "INSTRUCTOR",
+      "photoSrc": "/headshots/oc/03_WJian.jpg",
+      "portfolio": "Band | Piper's Section",
+      "photoPosition": "object-top",
+      "photoScale": "scale-125"
+    },
+    {
+      "name": "GAN ERIN XIN",
+      "rank": "INSTRUCTOR",
+      "photoSrc": "/headshots/oc/03_EXin.jpg",
+      "portfolio": "Awards",
+      "photoPosition": "object-top",
+      "photoScale": "scale-110"
+    },
+    {
+      "name": "CH'NG CHEAN PEI",
+      "rank": "",
+      "photoSrc": "/headshots/oc/03_CPei.jpg",
+      "portfolio": "Discipline",
+      "photoPosition": "object-top",
+      "photoScale": "scale-115"
+    },
+    {
+      "name": "CHU MEI XIN",
+      "rank": "INSTRUCTOR",
+      "photoSrc": "/headshots/oc/03_MXin.jpg",
+      "portfolio": "Band",
+      "photoPosition": "object-top",
+      "photoScale": "scale-125"
+    },
+    {
+      "name": "ONG QIAN HAN",
+      "rank": "INSTRUCTOR",
+      "photoSrc": "/headshots/oc/03_QHan.jpg",
+      "portfolio": "Human Resources",
+      "photoPosition": "object-top",
+      "photoScale": "scale-110"
+    },
+    {
+      "name": "Cha Bing Hong",
+      "rank": "INSTRUCTOR",
+      "photoSrc": "/headshots/oc/03_BHong.jpg",
+      "portfolio": "Human Resources",
+      "photoPosition": "object-top",
+      "photoScale": "scale-110"
+    },
+    {
+      "name": "Jenny Poh",
+      "rank": "INSTRUCTOR",
+      "photoSrc": "/headshots/oc/03_JPoh.jpg",
+      "portfolio": "Human Resources",
+      "photoPosition": "object-top",
+      "photoScale": "scale-120"
+    },
+    {
+      "name": "Renee Lim",
+      "rank": "INSTRUCTOR",
+      "photoSrc": "/headshots/oc/03_RLim.jpg",
+      "portfolio": "Human Resources",
+      "photoPosition": "object-top",
+      "photoScale": "scale-120"
+    },
+    {
+      "name": "Chan Hui Yie",
+      "rank": "INSTRUCTOR",
+      "photoSrc": "/headshots/oc/03_HYie.jpg",
+      "portfolio": "Human Resources",
+      "photoPosition": "object-top",
+      "photoScale": "scale-110"
+    }
+  ]
+}

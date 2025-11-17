@@ -1,0 +1,81 @@
+{
+  "category": "Founder's Award Recipients",
+  "description": "The highest honor in The Boys' Brigade, recognizing exceptional dedication and service",
+  "lastUpdated": "2025-11-17",
+  "people": [
+    {
+      "name": "ONG QIAN YING",
+      "rank": "WARRANT OFFICER",
+      "photoSrc": "/headshots/oc/02_QYing.jpg",
+      "portfolio": "2023",
+      "photoPosition": "object-top",
+      "photoScale": "scale-110"
+    },
+    {
+      "name": "KUAN CHIN HOU",
+      "rank": "warrant officer",
+      "photoSrc": "/headshots/oc/02_CHou.jpg",
+      "portfolio": "2023",
+      "photoPosition": "object-[0%_10%]",
+      "photoScale": "scale-110",
+      "photoRotate": "-rotate-1"
+    },
+    {
+      "name": "LIM CHUAN ZHE",
+      "rank": "warrant officer",
+      "photoSrc": "/headshots/oc/02_CZhe.jpg",
+      "portfolio": "2022",
+      "photoPosition": "object-top",
+      "photoScale": "scale-105"
+    },
+    {
+      "name": "LIM MEI QING",
+      "rank": "warrant officer",
+      "photoSrc": "/headshots/oc/02_MQing.jpg",
+      "portfolio": "2017",
+      "photoPosition": "object-top",
+      "photoScale": "scale-110"
+    },
+    {
+      "name": "LIM YONG FU",
+      "rank": "warrant officer",
+      "photoSrc": "/headshots/oc/02_YFu.jpg",
+      "portfolio": "2017",
+      "photoPosition": "object-top",
+      "photoScale": "scale-110"
+    },
+    {
+      "name": "Daniel Tan",
+      "rank": "WARRANT OFFICER",
+      "photoSrc": "/headshots/oc/02_DTan.jpg",
+      "portfolio": "2017",
+      "photoPosition": "object-[50%_0%]",
+      "photoScale": "scale-125"
+    },
+    {
+      "name": "LEE SANG YU",
+      "rank": "CORPORAL (DISCHARGED)",
+      "photoSrc": "/headshots/honorroll/SYu.jpg",
+      "portfolio": "2017",
+      "photoPosition": "object-[0%_10%]",
+      "photoScale": "scale-120"
+    },
+    {
+      "name": "LUKE TENG",
+      "rank": "Captain",
+      "photoSrc": "/headshots/oc/01_LTeng.jpg",
+      "portfolio": "2012",
+      "photoPosition": "object-top",
+      "photoScale": "scale-110"
+    },
+    {
+      "name": "JOCELYN TAI",
+      "rank": "Lieutenant",
+      "photoSrc": "/headshots/oc/01_JTai.jpg",
+      "portfolio": "2011",
+      "photoPosition": "object-top",
+      "photoScale": "scale-120",
+      "photoRotate": "-rotate-1"
+    }
+  ]
+}

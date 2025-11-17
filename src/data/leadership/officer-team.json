@@ -1,0 +1,120 @@
+{
+  "category": "Officer Council",
+  "description": "The dedicated individuals who lead and inspire our company",
+  "lastUpdated": "2025-11-17",
+  "people": [
+    {
+      "name": "KOH HWEI YEE",
+      "rank": "CHAPLAIN",
+      "photoSrc": "/headshots/oc/01_HYee.jpg",
+      "portfolio": "Christian Education",
+      "photoPosition": "object-top",
+      "photoScale": "scale-120"
+    },
+    {
+      "name": "LUKE TENG",
+      "rank": "CAPTAIN",
+      "photoSrc": "/headshots/oc/01_LTeng.jpg",
+      "portfolio": "Platoons & Quartermaster",
+      "photoPosition": "object-top",
+      "photoScale": "scale-110"
+    },
+    {
+      "name": "DANIEL WOO",
+      "rank": "HONORARY CAPTAIN",
+      "photoSrc": "/headshots/oc/01_DWoo.jpg",
+      "portfolio": "Christian Education",
+      "photoPosition": "object-[60%_0%]",
+      "photoScale": "scale-110"
+    },
+    {
+      "name": "SORVINE LIM",
+      "rank": "LIEUTENANT",
+      "photoSrc": "/headshots/oc/01_SLim.jpg",
+      "portfolio": "Praise & Worship",
+      "photoPosition": "object-top",
+      "photoScale": "scale-120"
+    },
+    {
+      "name": "JOCELYN TAI",
+      "rank": "LIEUTENANT",
+      "photoSrc": "/headshots/oc/01_JTai.jpg",
+      "portfolio": "Training",
+      "photoPosition": "object-top",
+      "photoScale": "scale-120",
+      "photoRotate": "-rotate-1"
+    },
+    {
+      "name": "JOSEPH THAW",
+      "rank": "LIEUTENANT",
+      "photoSrc": "/headshots/oc/01_JThaw.jpg",
+      "portfolio": "Parade & Discipline",
+      "photoPosition": "object-top",
+      "photoScale": "scale-110"
+    },
+    {
+      "name": "JACE LIM",
+      "rank": "WARRANT OFFICER",
+      "photoSrc": "/headshots/oc/02_SYing.jpg",
+      "portfolio": "Awards",
+      "photoPosition": "object-top",
+      "photoScale": "scale-110"
+    },
+    {
+      "name": "LIM YONG FU",
+      "rank": "WARRANT OFFICER",
+      "photoSrc": "/headshots/oc/02_YFu.jpg",
+      "portfolio": "Discipline",
+      "photoPosition": "object-top",
+      "photoScale": "scale-110"
+    },
+    {
+      "name": "LIM MEI QING",
+      "rank": "WARRANT OFFICER",
+      "photoSrc": "/headshots/oc/02_MQing.jpg",
+      "portfolio": "Awards",
+      "photoPosition": "object-top",
+      "photoScale": "scale-110"
+    },
+    {
+      "name": "LIM CHUAN ZHE",
+      "rank": "WARRANT OFFICER",
+      "photoSrc": "/headshots/oc/02_CZhe.jpg",
+      "portfolio": "Band & Media",
+      "photoPosition": "object-top",
+      "photoScale": "scale-105"
+    },
+    {
+      "name": "CHAYU CHUN WEI",
+      "rank": "WARRANT OFFICER",
+      "photoSrc": "/headshots/oc/02_CWei.jpg",
+      "portfolio": "Band (Drummers)",
+      "photoPosition": "object-top"
+    },
+    {
+      "name": "NG ZHI HUI",
+      "rank": "WARRANT OFFICER",
+      "photoSrc": "/headshots/oc/02_ZHui.jpg",
+      "portfolio": "Special Events",
+      "photoPosition": "object-top",
+      "photoScale": "scale-105"
+    },
+    {
+      "name": "KUAN CHIN HOU",
+      "rank": "WARRANT OFFICER",
+      "photoSrc": "/headshots/oc/02_CHou.jpg",
+      "portfolio": "Training & HR",
+      "photoPosition": "object-[0%_10%]",
+      "photoScale": "scale-110",
+      "photoRotate": "-rotate-1"
+    },
+    {
+      "name": "ONG QIAN YING",
+      "rank": "WARRANT OFFICER",
+      "photoSrc": "/headshots/oc/02_QYing.jpg",
+      "portfolio": "Band (Pipers) & Awards",
+      "photoPosition": "object-top",
+      "photoScale": "scale-110"
+    }
+  ]
+}
