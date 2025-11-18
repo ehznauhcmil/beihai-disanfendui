@@ -6,82 +6,72 @@
     {
       "name": "LEONG ZI ZE",
       "rank": "CORPORAL",
-      "photoSrc": "/headshots//03_WJian.jpg",
-      "portfolio": "Band (Pipers) & Training",
+      "photoSrc": "/headshots/ncoc/12_ZZe.jpg",
       "photoPosition": "object-top",
-      "photoScale": "scale-125"
+      "photoScale": "scale-100"
     },
     {
-      "name": "GAN ERIN XIN",
-      "rank": "INSTRUCTOR",
-      "photoSrc": "/headshots/oc/03_EXin.jpg",
-      "portfolio": "Christian Education",
+      "name": "SAMUEL HII",
+      "rank": "CORPORAL",
+      "photoSrc": "/headshots/ncoc/12_SHii.jpg",
       "photoPosition": "object-top",
-      "photoScale": "scale-110"
+      "photoScale": "scale-100"
     },
     {
-      "name": "CH'NG CHEAN PEI",
-      "rank": "INSTRUCTOR",
-      "photoSrc": "/headshots/oc/03_CPei.jpg",
-      "portfolio": "Discipline",
+      "name": "WENDY HOOI",
+      "rank": "CORPORAL",
+      "photoSrc": "/headshots/ncoc/12_WHooi.jpg",
       "photoPosition": "object-top",
-      "photoScale": "scale-115"
+      "photoScale": "scale-100"
     },
     {
-      "name": "CHU MEI XIN",
-      "rank": "INSTRUCTOR",
-      "photoSrc": "/headshots/oc/03_MXin.jpg",
-      "portfolio": "Band",
+      "name": "CHA JIA XIN",
+      "rank": "CORPORAL",
+      "photoSrc": "/headshots/ncoc/12_JXin.jpg",
       "photoPosition": "object-top",
-      "photoScale": "scale-125"
+      "photoScale": "scale-100"
     },
     {
-      "name": "ONG QIAN HAN",
-      "rank": "INSTRUCTOR",
-      "photoSrc": "/headshots/oc/03_QHan.jpg",
-      "portfolio": "Discipline",
+      "name": "JERRICK TEH",
+      "rank": "LANCE CORPORAL",
+      "photoSrc": "/headshots/ncoc/13_JTeh.jpg",
       "photoPosition": "object-top",
-      "photoScale": "scale-110"
+      "photoScale": "scale-100"
     },
     {
-      "name": "CHA BING HONG",
-      "rank": "INSTRUCTOR",
-      "photoSrc": "/headshots/oc/03_BHong.jpg",
-      "portfolio": "Training & HR",
+      "name": "TEOW KAI SHEN",
+      "rank": "LANCE CORPORAL",
+      "photoSrc": "/headshots/ncoc/13_KShen.jpg",
       "photoPosition": "object-top",
-      "photoScale": "scale-110"
+      "photoScale": "scale-100"
     },
     {
-      "name": "JENNY POH",
-      "rank": "INSTRUCTOR",
-      "photoSrc": "/headshots/oc/03_JPoh.jpg",
-      "portfolio": "Interests",
+      "name": "LOH YU HONG",
+      "rank": "LANCE CORPORAL",
+      "photoSrc": "/headshots/ncoc/13_YHong.jpg",
       "photoPosition": "object-top",
-      "photoScale": "scale-120"
+      "photoScale": "scale-100"
     },
     {
-      "name": "Renee Lim",
-      "rank": "INSTRUCTOR",
-      "photoSrc": "/headshots/oc/03_RLim.jpg",
-      "portfolio": "Awards",
+      "name": "GOH JIA ZHE",
+      "rank": "LANCE CORPORAL",
+      "photoSrc": "/headshots/ncoc/13_JZhe.jpg",
       "photoPosition": "object-top",
-      "photoScale": "scale-120"
+      "photoScale": "scale-100"
     },
     {
-      "name": "WONG QING",
-      "rank": "INSTRUCTOR",
-      "photoSrc": "/headshots/general/user.png",
-      "portfolio": "Awards",
+      "name": "TAN KHANG YU",
+      "rank": "LANCE CORPORAL",
+      "photoSrc": "/headshots/ncoc/13_KYu.jpg",
       "photoPosition": "object-top",
-      "photoScale": "scale-110"
+      "photoScale": "scale-100"
     },
     {
-      "name": "Chan Hui Yie",
-      "rank": "INSTRUCTOR",
-      "photoSrc": "/headshots/oc/03_HYie.jpg",
-      "portfolio": "Platoons (St. Mark)",
+      "name": "LIM EN YEE",
+      "rank": "LANCE CORPORAL",
+      "photoSrc": "/headshots/ncoc/13_EYee.jpg",
       "photoPosition": "object-top",
-      "photoScale": "scale-110"
+      "photoScale": "scale-100"
     }
   ]
 }
