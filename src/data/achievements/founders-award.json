@@ -1,7 +1,7 @@
 {
   "category": "Founder's Award Recipients",
   "description": "The highest honor in The Boys' Brigade, recognizing exceptional dedication and service",
-  "lastUpdated": "2025-11-17",
+  "lastUpdated": "2025-11-19",
   "people": [
     {
       "name": "ONG QIAN YING",
@@ -51,14 +51,6 @@
       "portfolio": "2017",
       "photoPosition": "object-[50%_0%]",
       "photoScale": "scale-125"
-    },
-    {
-      "name": "LEE SANG YU",
-      "rank": "CORPORAL (DISCHARGED)",
-      "photoSrc": "/headshots/honorroll/SYu.jpg",
-      "portfolio": "2017",
-      "photoPosition": "object-[0%_10%]",
-      "photoScale": "scale-120"
     },
     {
       "name": "LUKE TENG",
