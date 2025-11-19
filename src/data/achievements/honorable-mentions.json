@@ -4,8 +4,16 @@
   "lastUpdated": "2025-11-19",
   "people": [
     {
+      "name": "LEE SANG YU",
+      "rank": "FOUNDER'S AWARD",
+      "photoSrc": "/headshots/honorroll/SYu.jpg",
+      "portfolio": "2017",
+      "photoPosition": "object-[0%_10%]",
+      "photoScale": "scale-120"
+    },
+    {
       "name": "YEOH KHA HOONG",
-      "rank": "SERGEANT (DISCHARGED)",
+      "rank": "PRESIDENT'S AWARD",
       "photoSrc": "/headshots/honorroll/KHoong.jpg",
       "portfolio": "2021",
       "photoPosition": "object-[0%_20%]",
@@ -13,7 +21,7 @@
     },
     {
       "name": "CINDY BEH",
-      "rank": "STAFF SERGEANT (DISCHARGED)",
+      "rank": "PRESIDENT'S AWARD",
       "photoSrc": "/headshots/honorroll/CBeh.jpg",
       "portfolio": "2020",
       "photoPosition": "object-[0%_5%]",
@@ -21,23 +29,16 @@
     },
     {
       "name": "JESSICA TAN",
-      "rank": "SERGEANT (DISCHARGED)",
+      "rank": "PRESIDENT'S AWARD",
       "photoSrc": "/headshots/honorroll/JTan.jpg",
       "portfolio": "2019",
       "photoPosition": "object-[0%_15%]",
       "photoScale": "scale-100"
     },
-    {
-      "name": "LEE SANG YU",
-      "rank": "CORPORAL (DISCHARGED)",
-      "photoSrc": "/headshots/honorroll/SYu.jpg",
-      "portfolio": "2017",
-      "photoPosition": "object-[0%_10%]",
-      "photoScale": "scale-120"
-    },
+    
     {
       "name": "LIM XIN HUI",
-      "rank": "SERGEANT (DISCHARGED)",
+      "rank": "PRESIDENT'S AWARD",
       "photoSrc": "/headshots/honorroll/XHui.jpg",
       "portfolio": "2016",
       "photoPosition": "object-top",
@@ -45,7 +46,7 @@
     },
     {
       "name": "TOH LI HOONG",
-      "rank": "CORPORAL (DISCHARGED)",
+      "rank": "PRESIDENT'S AWARD",
       "photoSrc": "/headshots/honorroll/LHoong.jpg",
       "portfolio": "2016",
       "photoPosition": "object-top",
@@ -53,7 +54,7 @@
     },
     {
       "name": "VICTOR SOON",
-      "rank": "CORPORAL (DISCHARGED)",
+      "rank": "PRESIDENT'S AWARD",
       "photoSrc": "/headshots/honorroll/TYan.jpg",
       "portfolio": "2012",
       "photoPosition": "object-top",
@@ -61,7 +62,7 @@
     },
     {
       "name": "JOSHUA CHAN",
-      "rank": "SERGEANT (DISCHARGED)",
+      "rank": "PRESIDENT'S AWARD",
       "photoSrc": "/headshots/general/user.png",
       "portfolio": "2010",
       "photoPosition": "object-top",
@@ -69,7 +70,7 @@
     },
     {
       "name": "LEANA LIM",
-      "rank": "CORPORAL (DISCHARGED)",
+      "rank": "PRESIDENT'S AWARD",
       "photoSrc": "/headshots/general/user.png",
       "portfolio": "2003",
       "photoPosition": "object-top",
@@ -77,7 +78,7 @@
     },
     {
       "name": "BRYANT LIM",
-      "rank": "CORPORAL (DISCHARGED)",
+      "rank": "PRESIDENT'S AWARD",
       "photoSrc": "/headshots/general/user.png",
       "portfolio": "2003",
       "photoPosition": "object-top",
