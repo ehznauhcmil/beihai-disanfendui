@@ -1,0 +1,88 @@
+{
+  "category": "Honorable Mentions",
+  "description": "Recognizing our discharged members who have received the President's Award or Founder's Award for their exceptional service",
+  "lastUpdated": "2025-11-19",
+  "people": [
+    {
+      "name": "LEE SANG YU",
+      "rank": "FOUNDER'S AWARD",
+      "photoSrc": "/headshots/honorroll/SYu.jpg",
+      "portfolio": "2017",
+      "photoPosition": "object-[0%_10%]",
+      "photoScale": "scale-120"
+    },
+    {
+      "name": "YEOH KHA HOONG",
+      "rank": "PRESIDENT'S AWARD",
+      "photoSrc": "/headshots/honorroll/KHoong.jpg",
+      "portfolio": "2021",
+      "photoPosition": "object-[0%_20%]",
+      "photoScale": "scale-110"
+    },
+    {
+      "name": "CINDY BEH",
+      "rank": "PRESIDENT'S AWARD",
+      "photoSrc": "/headshots/honorroll/CBeh.jpg",
+      "portfolio": "2020",
+      "photoPosition": "object-[0%_5%]",
+      "photoScale": "scale-115"
+    },
+    {
+      "name": "JESSICA TAN",
+      "rank": "PRESIDENT'S AWARD",
+      "photoSrc": "/headshots/honorroll/JTan.jpg",
+      "portfolio": "2019",
+      "photoPosition": "object-[0%_15%]",
+      "photoScale": "scale-100"
+    },
+    
+    {
+      "name": "LIM XIN HUI",
+      "rank": "PRESIDENT'S AWARD",
+      "photoSrc": "/headshots/honorroll/XHui.jpg",
+      "portfolio": "2016",
+      "photoPosition": "object-top",
+      "photoScale": "scale-130"
+    },
+    {
+      "name": "TOH LI HOONG",
+      "rank": "PRESIDENT'S AWARD",
+      "photoSrc": "/headshots/honorroll/LHoong.jpg",
+      "portfolio": "2016",
+      "photoPosition": "object-top",
+      "photoScale": "scale-140"
+    },
+    {
+      "name": "VICTOR SOON",
+      "rank": "PRESIDENT'S AWARD",
+      "photoSrc": "/headshots/honorroll/TYan.jpg",
+      "portfolio": "2012",
+      "photoPosition": "object-top",
+      "photoScale": "scale-110"
+    },
+    {
+      "name": "JOSHUA CHAN",
+      "rank": "PRESIDENT'S AWARD",
+      "photoSrc": "/headshots/general/user.png",
+      "portfolio": "2010",
+      "photoPosition": "object-top",
+      "photoScale": "scale-110"
+    },
+    {
+      "name": "LEANA LIM",
+      "rank": "PRESIDENT'S AWARD",
+      "photoSrc": "/headshots/general/user.png",
+      "portfolio": "2003",
+      "photoPosition": "object-top",
+      "photoScale": "scale-110"
+    },
+    {
+      "name": "BRYANT LIM",
+      "rank": "PRESIDENT'S AWARD",
+      "photoSrc": "/headshots/general/user.png",
+      "portfolio": "2003",
+      "photoPosition": "object-top",
+      "photoScale": "scale-110"
+    }
+  ]
+}
