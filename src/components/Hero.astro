@@ -1,46 +1,302 @@
 ---
 import '../styles/global.css';
+
+// Same content for all slides, only images change
+const slides = [
+  { image: '/IMG_0427.JPG' },
+  { image: '/IMG_0392.JPG' },
+  { image: '/IMG_0427.JPG' }
+];
+
+const content = {
+  title: 'Steadfast in Faith,<br class="hidden sm:block"/> Discipline, and Service',
+  description: 'Nurturing young men through faith-based activities, disciplined training, and community service.',
+  primaryCTA: { text: 'Explore Activities', href: '/activities' },
+  secondaryCTA: { text: 'Learn More', href: '/about/company' }
+};
 ---
 
-<section class="relative min-h-screen overflow-hidden bg-white">
-  <div class="absolute inset-0">
-    <img
-      src="/IMG_0427.JPG"
-      alt="Boys' Brigade members in uniform"
-      class="w-full h-full object-cover object-center opacity-95"
-    />
-    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-white/60"></div>
-  </div>
+<section class="hero-carousel relative min-h-screen overflow-hidden bg-black">
+  <!-- Slides Container -->
+  <div class="slides-container relative h-screen">
+    {slides.map((slide, index) => (
+      <div
+        class={`slide absolute inset-0 ${index === 0 ? 'active' : ''}`}
+        data-slide-index={index}
+      >
+        <div class="slide-image-wrapper absolute inset-0">
+          <img
+            src={slide.image}
+            alt="Boys' Brigade members"
+            class="slide-image w-full h-full object-cover object-center"
+            loading={index === 0 ? 'eager' : 'lazy'}
+          />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70"></div>
+        </div>
+      </div>
+    ))}
 
-  <div class="relative flex min-h-screen items-center justify-center pt-20 pb-16">
-    <div class="mx-auto max-w-5xl px-6 text-center">
-      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight tracking-tight">
-        Steadfast in Faith,<br class="hidden sm:block"/> Discipline, and Service
-      </h1>
-      <p class="text-xl sm:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto font-light">
-        Nurturing young men through faith-based activities, disciplined training, and community service.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a
-          href="/activities"
-          class="inline-block bg-[#0071e3] text-white px-8 py-3.5 rounded-full font-medium text-base hover:bg-[#0077ed] transition-colors duration-200 shadow-lg cursor-pointer"
-        >
-          Explore Activities
-        </a>
-        <a
-          href="/about/company"
-          class="inline-block bg-white/10 backdrop-blur-sm text-white border border-white/30 px-8 py-3.5 rounded-full font-medium text-base hover:bg-white/20 transition-colors duration-200 cursor-pointer"
-        >
-          Learn More
-        </a>
+    <!-- Content layer (stays constant) -->
+    <div class="content-layer relative flex min-h-screen items-center justify-center px-6 pt-20 pb-32 z-10">
+      <div class="mx-auto max-w-5xl text-center">
+        <h1
+          class="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight"
+          set:html={content.title}
+        />
+        <p class="text-xl sm:text-2xl text-white/90 mb-10 leading-relaxed max-w-3xl mx-auto font-light">
+          {content.description}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a
+            href={content.primaryCTA.href}
+            class="inline-block bg-white text-black px-8 py-3.5 rounded-full font-medium text-base hover:bg-white/90 transition-all duration-300 shadow-lg cursor-pointer transform hover:scale-105"
+          >
+            {content.primaryCTA.text}
+          </a>
+          <a
+            href={content.secondaryCTA.href}
+            class="inline-block bg-white/10 backdrop-blur-sm text-white border border-white/40 px-8 py-3.5 rounded-full font-medium text-base hover:bg-white/20 transition-all duration-300 cursor-pointer"
+          >
+            {content.secondaryCTA.text}
+          </a>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Scroll indicator -->
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-    </svg>
+  <!-- Navigation Dots -->
+  <div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+    {slides.map((_, index) => (
+      <button
+        class={`nav-dot w-2 h-2 rounded-full transition-all duration-500 cursor-pointer ${index === 0 ? 'bg-white w-8' : 'bg-white/40 hover:bg-white/60'}`}
+        data-slide={index}
+        aria-label={`Go to slide ${index + 1}`}
+      />
+    ))}
   </div>
+
+  <!-- Navigation Arrows (Hidden on mobile, shown on hover on desktop) -->
+  <button
+    class="nav-arrow prev-arrow absolute left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white opacity-0 hover:opacity-100 hover:bg-white/20 transition-all duration-300 cursor-pointer hidden md:flex"
+    aria-label="Previous slide"
+  >
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+    </svg>
+  </button>
+  <button
+    class="nav-arrow next-arrow absolute right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white opacity-0 hover:opacity-100 hover:bg-white/20 transition-all duration-300 cursor-pointer hidden md:flex"
+    aria-label="Next slide"
+  >
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </button>
 </section>
+
+<style>
+  .hero-carousel:hover .nav-arrow {
+    opacity: 0.7;
+  }
+
+  .nav-arrow:hover {
+    opacity: 1 !important;
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  /* Smooth slide transitions */
+  .slide {
+    opacity: 0;
+    transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity;
+  }
+
+  .slide.active {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  /* Subtle static zoom for depth */
+  .slide-image {
+    transform: scale(1.05);
+    transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Navigation dots */
+  .nav-dot {
+    will-change: width, background-color;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Content layer */
+  .content-layer {
+    pointer-events: none;
+  }
+
+  .content-layer a {
+    pointer-events: all;
+  }
+
+  /* Smooth entrance animation for content */
+  .content-layer > div {
+    animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s backwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<script>
+  class HeroCarousel {
+    private currentSlide = 0;
+    private slides: NodeListOf<HTMLElement>;
+    private dots: NodeListOf<HTMLElement>;
+    private prevArrow: HTMLElement | null;
+    private nextArrow: HTMLElement | null;
+    private autoplayInterval: number | null = null;
+    private autoplayDelay = 5000; // 5 seconds
+    private isTransitioning = false;
+    private touchStartX = 0;
+    private touchEndX = 0;
+
+    constructor() {
+      this.slides = document.querySelectorAll('.slide');
+      this.dots = document.querySelectorAll('.nav-dot');
+      this.prevArrow = document.querySelector('.prev-arrow');
+      this.nextArrow = document.querySelector('.next-arrow');
+
+      this.init();
+    }
+
+    init() {
+      // Dot navigation
+      this.dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => this.goToSlide(index));
+      });
+
+      // Arrow navigation
+      this.prevArrow?.addEventListener('click', () => this.previousSlide());
+      this.nextArrow?.addEventListener('click', () => this.nextSlide());
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') this.previousSlide();
+        if (e.key === 'ArrowRight') this.nextSlide();
+      });
+
+      // Touch/swipe support
+      const carousel = document.querySelector('.hero-carousel');
+      carousel?.addEventListener('touchstart', (e) => {
+        this.touchStartX = (e as TouchEvent).changedTouches[0].screenX;
+      }, { passive: true });
+
+      carousel?.addEventListener('touchend', (e) => {
+        this.touchEndX = (e as TouchEvent).changedTouches[0].screenX;
+        this.handleSwipe();
+      }, { passive: true });
+
+      // Pause autoplay on hover (desktop)
+      carousel?.addEventListener('mouseenter', () => this.pauseAutoplay());
+      carousel?.addEventListener('mouseleave', () => this.startAutoplay());
+
+      // Pause autoplay on visibility change
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          this.pauseAutoplay();
+        } else {
+          this.startAutoplay();
+        }
+      });
+
+      // Start autoplay
+      this.startAutoplay();
+    }
+
+    goToSlide(index: number) {
+      if (this.isTransitioning || index === this.currentSlide) return;
+
+      this.isTransitioning = true;
+
+      // Remove active class from current slide
+      this.slides[this.currentSlide].classList.remove('active');
+
+      // Add active class to new slide
+      this.slides[index].classList.add('active');
+
+      // Update dots
+      this.dots[this.currentSlide].classList.remove('bg-white', 'w-8');
+      this.dots[this.currentSlide].classList.add('bg-white/40');
+
+      this.dots[index].classList.remove('bg-white/40');
+      this.dots[index].classList.add('bg-white', 'w-8');
+
+      this.currentSlide = index;
+
+      // Reset transition lock after animation completes (2s for smoother transition)
+      setTimeout(() => {
+        this.isTransitioning = false;
+      }, 2000);
+
+      // Reset autoplay timer
+      this.resetAutoplay();
+    }
+
+    nextSlide() {
+      const nextIndex = (this.currentSlide + 1) % this.slides.length;
+      this.goToSlide(nextIndex);
+    }
+
+    previousSlide() {
+      const prevIndex = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+      this.goToSlide(prevIndex);
+    }
+
+    handleSwipe() {
+      const swipeThreshold = 50;
+      const diff = this.touchStartX - this.touchEndX;
+
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          this.nextSlide();
+        } else {
+          this.previousSlide();
+        }
+      }
+    }
+
+    startAutoplay() {
+      if (this.autoplayInterval) return;
+
+      this.autoplayInterval = window.setInterval(() => {
+        this.nextSlide();
+      }, this.autoplayDelay);
+    }
+
+    pauseAutoplay() {
+      if (this.autoplayInterval) {
+        clearInterval(this.autoplayInterval);
+        this.autoplayInterval = null;
+      }
+    }
+
+    resetAutoplay() {
+      this.pauseAutoplay();
+      this.startAutoplay();
+    }
+  }
+
+  // Initialize carousel when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => new HeroCarousel());
+  } else {
+    new HeroCarousel();
+  }
+</script>
