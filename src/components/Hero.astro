@@ -65,7 +65,7 @@ const content = {
   </div>
 
   <!-- Navigation Dots -->
-  <div class="absolute bottom-24 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+  <div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex gap-3">
     {slides.map((_, index) => (
       <button
         class={`nav-dot w-2 h-2 rounded-full transition-all duration-500 cursor-pointer ${index === 0 ? 'bg-white w-8' : 'bg-white/40 hover:bg-white/60'}`}
@@ -73,13 +73,6 @@ const content = {
         aria-label={`Go to slide ${index + 1}`}
       />
     ))}
-  </div>
-
-  <!-- Scroll indicator -->
-  <div class="scroll-indicator absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce opacity-70">
-    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-    </svg>
   </div>
 
   <!-- Navigation Arrows (Hidden on mobile, shown on hover on desktop) -->
@@ -111,7 +104,7 @@ const content = {
     transform: translateY(-50%) scale(1.05);
   }
 
-  /* Slide transitions with Ken Burns effect */
+  /* Smooth slide transitions */
   .slide {
     opacity: 0;
     transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -123,21 +116,10 @@ const content = {
     z-index: 1;
   }
 
-  .slide-image-wrapper {
-    will-change: transform;
-  }
-
-  .slide.active .slide-image {
-    animation: kenBurns 20s ease-out forwards;
-  }
-
-  @keyframes kenBurns {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(1.08);
-    }
+  /* Subtle static zoom for depth */
+  .slide-image {
+    transform: scale(1.05);
+    transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   /* Navigation dots */
