@@ -3,29 +3,30 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import NewsSection from '../components/NewsSection.astro';
+import Testimonials from '../components/Testimonials.astro';
 import '../styles/global.css';
 
-const activityHighlights = [
+const coreActivities = [
   {
     title: 'Drill & Discipline',
-    description: 'Structured drill sessions that build teamwork, precision, and respect.',
+    description: 'Structured drill sessions that build teamwork, precision, and respect through military-style training.',
     href: '/activities/drill-discipline',
     imageSrc: '/activities/drill.JPG',
     imageAlt: 'Cadets practicing drill formation outdoors'
   },
   {
-    title: 'Adventure & Expeditions',
-    description: 'Outdoor expeditions that grow resilience, survival skills, and leadership.',
-    href: '/activities/adventure',
+    title: 'Skills & Training',
+    description: 'Comprehensive programs developing leadership, survival skills, and practical competencies.',
+    href: '/activities/skills-training',
     imageSrc: '/activities/expedition.JPG',
-    imageAlt: 'Cadets gathered before a hiking expedition'
+    imageAlt: 'Cadets learning essential skills during training'
   },
   {
-    title: 'Community Service',
-    description: 'Serving the local community through outreach, events, and partnerships.',
-    href: '/activities/community-service',
+    title: 'Awards & Band',
+    description: 'Recognition programs and musical excellence that celebrate achievement and foster creativity.',
+    href: '/activities/awards-band',
     imageSrc: '/activities/community-service.JPG',
-    imageAlt: 'Cadets working together during a community service project'
+    imageAlt: 'Award ceremonies and band performances'
   }
 ];
 ---
@@ -34,7 +35,59 @@ const activityHighlights = [
   <main>
     <Hero />
 
-    <!-- Programs Section -->
+    <!-- Values Section -->
+    <section class="bg-gray-50 py-20 sm:py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
+            Our Values
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Building character through faith, discipline, and service to the community.
+          </p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-3">
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#0071e3] mb-6">
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Faith</h3>
+            <p class="text-base text-gray-600 leading-relaxed">
+              Grounded in Christian values, we nurture spiritual growth and moral development.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#0071e3] mb-6">
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Discipline</h3>
+            <p class="text-base text-gray-600 leading-relaxed">
+              Through structured activities, we instill self-control, responsibility, and respect.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#0071e3] mb-6">
+              <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Service</h3>
+            <p class="text-base text-gray-600 leading-relaxed">
+              We empower young men to serve their community and make a positive impact.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Activities Section -->
     <section class="bg-white py-20 sm:py-24 lg:py-32">
       <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         <div class="text-center mb-16">
@@ -47,7 +100,7 @@ const activityHighlights = [
         </div>
 
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {activityHighlights.map(({ title, description, href, imageSrc, imageAlt }) => (
+          {coreActivities.map(({ title, description, href, imageSrc, imageAlt }) => (
             <a
               href={href}
               class="group block overflow-hidden rounded-3xl bg-gray-50 transition-shadow duration-300 hover:shadow-2xl cursor-pointer"
@@ -87,52 +140,8 @@ const activityHighlights = [
       </div>
     </section>
 
-    <!-- Values Section -->
-    <section class="bg-gray-50 py-20 sm:py-24 lg:py-32">
-      <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
-            Our Values
-          </h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Building character through faith, discipline, and service to the community.
-          </p>
-        </div>
-
-        <div class="grid gap-8 md:grid-cols-3">
-          <div class="text-center">
-            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#0071e3] text-white text-2xl font-bold mb-4">
-              1
-            </div>
-            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Faith</h3>
-            <p class="text-base text-gray-600 leading-relaxed">
-              Grounded in Christian values, we nurture spiritual growth and moral development.
-            </p>
-          </div>
-
-          <div class="text-center">
-            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#0071e3] text-white text-2xl font-bold mb-4">
-              2
-            </div>
-            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Discipline</h3>
-            <p class="text-base text-gray-600 leading-relaxed">
-              Through structured activities, we instill self-control, responsibility, and respect.
-            </p>
-          </div>
-
-          <div class="text-center">
-            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#0071e3] text-white text-2xl font-bold mb-4">
-              3
-            </div>
-            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Service</h3>
-            <p class="text-base text-gray-600 leading-relaxed">
-              We empower young men to serve their community and make a positive impact.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <NewsSection />
+
+    <Testimonials />
   </main>
 </Layout>
