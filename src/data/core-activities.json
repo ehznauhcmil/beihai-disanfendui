@@ -10,14 +10,35 @@
     "title": "Skills & Training",
     "description": "Comprehensive programs developing leadership, survival skills, and practical competencies.",
     "href": "/activities/skills-training",
-    "imageSrc": "/activities/expedition.JPG",
+    "imageSrc": "/activities/skills-training.JPG",
     "imageAlt": "Cadets learning essential skills during training"
   },
   {
-    "title": "Awards & Band",
-    "description": "Recognition programs and musical excellence that celebrate achievement and foster creativity.",
+    "title": "Awards & Recognition",
+    "description": "Badges and awards to promote personal growth and acknowledge achievements.",
     "href": "/activities/awards-band",
-    "imageSrc": "/activities/community-service.JPG",
+    "imageSrc": "/activities/awards-recognition.JPG",
+    "imageAlt": "Award ceremonies and band performances"
+  },
+  {
+    "title": "Camps & Expeditions",
+    "description": "Outdoorsman experiences that promote resilience, teamwork, and a love for nature.",
+    "href": "/activities/awards-band",
+    "imageSrc": "/activities/expedition.JPG",
+    "imageAlt": "Award ceremonies and band performances"
+  },
+  {
+    "title": "Pipes & Drums",
+    "description": "Preservation of cultural heritage through traditional Scottish music and performances of the bagpipes.",
+    "href": "/activities/awards-band",
+    "imageSrc": "/activities/band.JPG",
+    "imageAlt": "Award ceremonies and band performances"
+  },
+  {
+    "title": "Events & Fellowship",
+    "description": "Opportunities for camaraderie and community engagement through various local and international events.",
+    "href": "/activities/awards-band",
+    "imageSrc": "/activities/events.JPG",
     "imageAlt": "Award ceremonies and band performances"
   }
 ]
