@@ -38,7 +38,7 @@ const coreActivities = [
     <!-- Values Section -->
     <section class="bg-gray-50 py-20 sm:py-24 lg:py-32">
       <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-        <div class="text-center mb-16">
+        <div class="text-center mb-16 scroll-reveal">
           <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
             Our Values
           </h2>
@@ -48,7 +48,7 @@ const coreActivities = [
         </div>
 
         <div class="grid gap-8 md:grid-cols-3">
-          <div class="text-center">
+          <div class="text-center scroll-reveal" data-delay="100">
             <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#0071e3] mb-6">
               <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -60,7 +60,7 @@ const coreActivities = [
             </p>
           </div>
 
-          <div class="text-center">
+          <div class="text-center scroll-reveal" data-delay="200">
             <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#0071e3] mb-6">
               <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -72,7 +72,7 @@ const coreActivities = [
             </p>
           </div>
 
-          <div class="text-center">
+          <div class="text-center scroll-reveal" data-delay="300">
             <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#0071e3] mb-6">
               <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -90,7 +90,7 @@ const coreActivities = [
     <!-- Core Activities Section -->
     <section class="bg-white py-20 sm:py-24 lg:py-32">
       <div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-        <div class="text-center mb-16">
+        <div class="text-center mb-16 scroll-reveal">
           <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
             Our Core Activities
           </h2>
@@ -100,10 +100,11 @@ const coreActivities = [
         </div>
 
         <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {coreActivities.map(({ title, description, href, imageSrc, imageAlt }) => (
+          {coreActivities.map(({ title, description, href, imageSrc, imageAlt }, index) => (
             <a
               href={href}
-              class="group block overflow-hidden rounded-3xl bg-gray-50 transition-shadow duration-300 hover:shadow-2xl cursor-pointer"
+              class={`group block overflow-hidden rounded-3xl bg-gray-50 transition-shadow duration-300 hover:shadow-2xl cursor-pointer scroll-reveal`}
+              data-delay={index * 100}
             >
               <div class="relative h-64 w-full overflow-hidden">
                 <img
@@ -129,7 +130,7 @@ const coreActivities = [
           ))}
         </div>
 
-        <div class="text-center mt-12">
+        <div class="text-center mt-12 scroll-reveal" data-delay="300">
           <a
             href="/activities"
             class="inline-block bg-[#0071e3] text-white px-8 py-3.5 rounded-full font-medium text-base hover:bg-[#0077ed] transition-colors duration-200 cursor-pointer"
@@ -145,3 +146,93 @@ const coreActivities = [
     <Testimonials />
   </main>
 </Layout>
+
+<style>
+  /* Apple-style scroll reveal animations */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+  }
+
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Staggered animation delays */
+  .scroll-reveal[data-delay="100"] {
+    transition-delay: 0.1s;
+  }
+
+  .scroll-reveal[data-delay="200"] {
+    transition-delay: 0.2s;
+  }
+
+  .scroll-reveal[data-delay="300"] {
+    transition-delay: 0.3s;
+  }
+
+  .scroll-reveal[data-delay="400"] {
+    transition-delay: 0.4s;
+  }
+
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  // Apple-style scroll animation using Intersection Observer
+  class ScrollReveal {
+    constructor() {
+      this.elements = document.querySelectorAll('.scroll-reveal');
+      this.observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -10% 0px', // Trigger slightly before element enters viewport
+        threshold: 0.15 // Trigger when 15% of element is visible
+      };
+      this.init();
+    }
+
+    init() {
+      // Check if user prefers reduced motion
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (prefersReducedMotion) {
+        // Immediately show all elements if reduced motion is preferred
+        this.elements.forEach(el => el.classList.add('revealed'));
+        return;
+      }
+
+      // Create intersection observer
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Add revealed class when element enters viewport
+            entry.target.classList.add('revealed');
+            // Optionally unobserve after revealing (one-time animation)
+            observer.unobserve(entry.target);
+          }
+        });
+      }, this.observerOptions);
+
+      // Observe all scroll-reveal elements
+      this.elements.forEach(el => observer.observe(el));
+    }
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => new ScrollReveal());
+  } else {
+    new ScrollReveal();
+  }
+</script>
