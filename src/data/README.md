@@ -8,6 +8,7 @@ This directory contains all easily maintainable content data for the website, or
 src/data/
 ├── README.md                           # This file
 ├── types.ts                            # TypeScript type definitions
+├── highlights.json                     # News highlights and updates
 ├── leadership/
 │   ├── leadership-team.json            # Main leadership team members
 │   └── helpers-team.json               # Helper team members
@@ -75,6 +76,131 @@ To add a new person to any team or award list:
 - **`photoRotate`** (string): Tailwind rotation class for slight tilting. Examples:
   - `"-rotate-1"` - Rotate 1 degree counter-clockwise
   - `"rotate-2"` - Rotate 2 degrees clockwise
+
+---
+
+## Managing News Highlights
+
+All news highlights are managed through the `highlights.json` file.
+
+### Adding a New Highlight
+
+To add a new news item or event highlight:
+
+1. Open `highlights.json`
+2. Add a new entry to the array following this format:
+
+```json
+{
+  "slug": "your-event-slug",
+  "title": "Your Event Title",
+  "date": "2024-12-20",
+  "description": "Brief description that appears on cards (1-2 sentences)",
+  "category": "Training",
+  "imageSrc": "/activities/your-image.jpg",
+  "featured": false,
+  "content": "Full content here.\n\n## Section Heading\n\n- Bullet point\n- Another point\n\n**Bold text** works too."
+}
+```
+
+3. Place the entry at the beginning of the array (most recent news first)
+4. Save the file
+
+### Highlight Field Descriptions
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `slug` | string | Yes | URL-friendly identifier (lowercase, hyphens only). Used in `/news/slug` URLs |
+| `title` | string | Yes | Display title of the highlight |
+| `date` | string | Yes | ISO date format: `YYYY-MM-DD`. Used for automatic sorting |
+| `description` | string | Yes | Brief summary (1-2 sentences) shown in preview cards |
+| `category` | string | Yes | One of: `Training`, `Service`, `Achievement`, `Event`, `Competition` |
+| `imageSrc` | string | Yes | Path to image (relative to `/public` directory) |
+| `featured` | boolean | Yes | Set to `true` for priority highlights, `false` for regular |
+| `content` | string | Yes | Full article content with markdown formatting |
+
+### Available Categories
+
+Choose the most appropriate category:
+
+- **Training**: Camps, workshops, skill development sessions
+- **Service**: Community service, outreach activities
+- **Achievement**: Competition results, awards, milestones
+- **Event**: General events, celebrations, ceremonies
+- **Competition**: Drill competitions, specific competitive activities
+
+### Content Formatting
+
+The `content` field supports basic markdown:
+
+- **Paragraphs**: Use `\n\n` (double newline) to separate paragraphs
+- **Headings**:
+  - `## Main Section` for major sections
+  - `### Subsection` for subsections
+- **Bold**: `**bold text**`
+- **Italic**: `*italic text*`
+- **Bullet Lists**: Start lines with `- ` (dash and space)
+
+**Example Content:**
+```json
+"content": "Opening paragraph.\n\n## Highlights\n\n- First point\n- Second point\n\n## Results\n\nAnother paragraph with **bold text** and *italics*."
+```
+
+### Display Locations
+
+- **Homepage**: Shows 3 most recent highlights
+- **News Page** (`/news`): Shows 5 most recent highlights
+- **Individual Pages**: Each highlight gets its own page at `/news/[slug]`
+- **Sorting**: Automatically sorted by date (newest first)
+
+### Editing a Highlight
+
+1. Find the highlight in `highlights.json` by its `slug` or `title`
+2. Update the fields you want to change
+3. To update content, remember to use `\n\n` for new paragraphs
+4. Save the file
+
+### Removing a Highlight
+
+1. Locate the highlight object in the array
+2. Delete the entire object including its curly braces `{...}`
+3. Ensure proper comma placement (no comma after the last item)
+4. Save the file
+
+### Highlight Example
+
+Complete example entry:
+
+```json
+{
+  "slug": "annual-camp-2024",
+  "title": "Annual Camp 2024",
+  "date": "2024-12-15",
+  "description": "Three days of intensive training, team building, and spiritual growth at our annual camp.",
+  "category": "Training",
+  "imageSrc": "/activities/expedition.JPG",
+  "featured": true,
+  "content": "Our annual camp brought together cadets from across the company for three days of intensive training.\n\n## Highlights\n\n- Rock climbing and team building\n- Evening devotions\n- Leadership training\n- Survival skills workshops\n- Award ceremonies\n\nThe camp was a tremendous success!"
+}
+```
+
+### Important Slug Requirements
+
+⚠️ The `slug` field is critical as it creates the URL:
+- Must be unique (no duplicates)
+- Use lowercase letters, numbers, and hyphens only
+- No spaces or special characters
+- Should be descriptive (e.g., `community-service-dec-2024`, not `cs1`)
+- Cannot be changed once published (breaks existing links)
+
+### Image Guidelines for Highlights
+
+- Place images in `/public/activities/` or create a new `/public/news/` folder
+- Recommended size: 1200x800 pixels (3:2 aspect ratio)
+- Format: JPG (optimized for web, under 300KB)
+- Reference path: `/activities/image.jpg` (without `public` prefix)
+
+---
 
 ## Photo Guidelines
 
