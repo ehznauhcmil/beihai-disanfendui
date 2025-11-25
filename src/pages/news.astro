@@ -1,16 +1,16 @@
 ---
-import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
+import highlightsData from '../data/highlights.json';
 
-// Fetch all highlights and sort by date (most recent first)
-const allHighlights = await getCollection('highlights');
-const latestHighlights = allHighlights
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+// Sort by date (most recent first) and get top 5
+const latestHighlights = highlightsData
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
   .slice(0, 5);
 
 // Format date for display
-const formatDate = (date: Date) => {
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
   return date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
@@ -46,15 +46,15 @@ const formatDate = (date: Date) => {
                 <div class="md:col-span-2">
                   <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
                     <img
-                      src={highlight.data.imageSrc}
-                      alt={highlight.data.title}
+                      src={highlight.imageSrc}
+                      alt={highlight.title}
                       class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
                       loading={index === 0 ? 'eager' : 'lazy'}
                       decoding="async"
                     />
                     <div class="absolute top-4 left-4">
                       <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-[#0071e3] rounded-full">
-                        {highlight.data.category}
+                        {highlight.category}
                       </span>
                     </div>
                   </div>
@@ -66,17 +66,17 @@ const formatDate = (date: Date) => {
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
-                    <time datetime={highlight.data.date.toISOString()}>
-                      {formatDate(highlight.data.date)}
+                    <time datetime={highlight.date}>
+                      {formatDate(highlight.date)}
                     </time>
                   </div>
 
                   <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 group-hover:text-[#0071e3] transition-colors">
-                    {highlight.data.title}
+                    {highlight.title}
                   </h2>
 
                   <p class="text-lg text-gray-600 leading-relaxed mb-6">
-                    {highlight.data.description}
+                    {highlight.description}
                   </p>
 
                   <a
