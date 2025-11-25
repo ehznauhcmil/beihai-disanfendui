@@ -16,7 +16,7 @@ const formatDate = (dateString: string) => {
 
 <section class="bg-gray-50 py-20 sm:py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-    <div class="text-center mb-16 scroll-reveal">
+    <div class="text-center mb-16">
       <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
         Latest Highlights
       </h2>
@@ -26,8 +26,8 @@ const formatDate = (dateString: string) => {
     </div>
 
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      {latestHighlights.map((highlight, index) => (
-        <div class={`group overflow-hidden rounded-3xl bg-white transition-all duration-300 hover:shadow-2xl scroll-reveal`} data-delay={index * 100}>
+      {latestHighlights.map((highlight) => (
+        <div class="group overflow-hidden rounded-3xl bg-white transition-all duration-300 hover:shadow-2xl">
           <div class="relative h-56 w-full overflow-hidden">
             <img
               src={highlight.imageSrc}
@@ -57,7 +57,7 @@ const formatDate = (dateString: string) => {
       ))}
     </div>
 
-    <div class="text-center mt-12 scroll-reveal" data-delay="300">
+    <div class="text-center mt-12">
       <a
         href="/news"
         class="inline-block bg-[#0071e3] text-white px-8 py-3.5 rounded-full font-medium text-base hover:bg-[#0077ed] transition-colors duration-200 cursor-pointer"

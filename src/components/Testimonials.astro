@@ -19,7 +19,7 @@ const testimonials = [
 
 <section class="bg-white py-20 sm:py-24 lg:py-32">
   <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-    <div class="text-center mb-16 scroll-reveal">
+    <div class="text-center mb-16">
       <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
         What People Say
       </h2>
@@ -29,8 +29,8 @@ const testimonials = [
     </div>
 
     <div class="grid gap-8 md:grid-cols-2 max-w-6xl mx-auto">
-      {testimonials.map(({ quote, author, role, image }, index) => (
-        <div class={`relative bg-gray-50 rounded-3xl p-8 sm:p-10 hover:shadow-xl transition-shadow duration-300 scroll-reveal`} data-delay={index * 100}>
+      {testimonials.map(({ quote, author, role, image }) => (
+        <div class="relative bg-gray-50 rounded-3xl p-8 sm:p-10 hover:shadow-xl transition-shadow duration-300">
           <!-- Quote Icon -->
           <div class="absolute top-8 right-8 opacity-10">
             <svg class="w-16 h-16 text-[#0071e3]" fill="currentColor" viewBox="0 0 24 24">
