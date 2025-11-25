@@ -169,6 +169,9 @@ import coreActivities from '../data/core-activities.json';
 <script>
   // Apple-style scroll animation using Intersection Observer
   class ScrollReveal {
+    elements: NodeListOf<Element>;
+    observerOptions: IntersectionObserverInit;
+
     constructor() {
       this.elements = document.querySelectorAll('.scroll-reveal');
       this.observerOptions = {
