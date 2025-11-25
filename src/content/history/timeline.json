@@ -1,0 +1,162 @@
+[
+  {
+    "year": "1883",
+    "title": "Establishment of The Boys' Brigade",
+    "description": "The Boys' Brigade was founded in Glasgow, Scotland by **Sir William Alexander Smith**. It is the first voluntary uniformed youth organization in the world.",
+    "era": "1880s",
+    "images": ["/history/first-glasgow.JPG","/history/first-glasgow.JPG"]
+  },
+  {
+    "year": "1914",
+    "title": "Passing of the Founder",
+    "description": "**Sir William Alexander Smith** passed away in London on the 10th of May 1914. He was buried in Glasgow Western Necropolis, which can still be visited today in Scotland.",
+    "era": "1910s"
+  },
+  {
+    "year": "1916",
+    "title": "The Brigade Movement enters Asia",
+    "description": "**Rev. Gurthie Gamble** founded the first Company in Swatow, China, but was closed down as communism took over China.",
+    "era": "1910s"
+  },
+  {
+    "year": "1926",
+    "title": "New Logo Introduced",
+    "description": "A red cross was added to the original Boys' Brigade logo of an anchor, creating the Boys' Brigade logo we know today.",
+    "era": "1920s"
+  },
+  {
+    "year": "1930",
+    "title": "First Company in Southeast Asia",
+    "description": "**Mr James Fraser** introduced BB to Southeast Asia by forming the 1st Singapore Company in 1930.",
+    "era": "1930s"
+  },
+  {
+    "year": "1946",
+    "title": "First Company in Malaysia",
+    "description": "The BB started in Malaysia first with The 1st Penang Company by **Rev. Khoo Cheng Hoe** of Madras Lane Chinese Methodist Church, **Robert G. Davis**, a former Captain of The 6th Birkenhead Company in Tranmere UK, and **Geh Hun Kheng**, principal of the Anglo Chinese Primary School.",
+    "era": "1940s"
+  },
+  {
+    "year": "1995",
+    "title": "The Foundation of 3rd Butterworth Company",
+    "description": "**Rev. Ng Teow Guan** repeated our Founder's initiatives at the Butterworth Chinese Methodist Church (BWCMC), recruiting youths from the church to start the Boys' Brigade movement. BB activities were held on Sundays at the Perai Chinese Methodist Chapel。",
+    "era": "1990s"
+  },
+  {
+    "year": "1996",
+    "title": "Establishment of 3rd Butterworth Company",
+    "description": "50 years after 1st Penang Company was established, The 3rd Butterworth Company, under BWCMC, was officiated on the 24th of July 1996. On top of the church-based platoons, the company further expanded to include SMK St. Mark and SMJK Chung Ling Butterworth.",
+    "era": "1990s"
+  },
+  {
+    "year": "1997",
+    "title": "Change in Leadership",
+    "description": "**Mr. Daniel Woo** took over as the Company's Captain.",
+    "era": "1990s",
+    "image": "/history/daniel-woo.jpg",
+    "imageAlign": "top"
+  },
+  {
+    "year": "1998",
+    "title": "Establishment of 3rd Butterworth Company",
+    "description": "Due to decreasing recruits joining the Junior Section, the Company had to unfortunately close down the section.",
+    "era": "1990s"
+  },
+  {
+    "year": "2000",
+    "title": "Brief expansion to SMK Kampung Kastam",
+    "description": "Our Company had a short extension to SMK Kampung Kastam but a lack of manpower caused the company to close down Kampung Kastam Platoon in 2002.",
+    "era": "2000s"
+  },
+  {
+    "year": "2002",
+    "title": "Start of 3rd Butterworth's Primer Section",
+    "description": "10 youths between the age of 18 to 20 formed the Company's first Primer Section.",
+    "era": "2000s"
+  },
+  {
+    "year": "2003",
+    "title": "The Company's first President's Award recipients",
+    "description": "**Bryant Lim**, **Leana Lim**, and **Sorvine Lim** were the first batch of recipients of the Company's President's Award, the second highest Award attainble in the Senior Section.",
+    "era": "2000s"
+  },
+  {
+    "year": "2009",
+    "title": "Bagpipes Introduced to the Company",
+    "description": "The Company bought its first two bagpipes through years of fundraising. The first batch of pipers commuted to 8th Penang Company weekly to learn and practice this traditional Scottish instrument.",
+    "era": "2000s",
+    "images":["/history/band-first-batch-01.jpg", "/history/band-first-batch-02.jpg"]
+  },
+  {
+    "year": "2010",
+    "title":"First National Performance",
+    "description":"**Victor Soon** and **Joshua Chan** represented our company to performed during the opening and closing ceremonies of the BB Pesta, which was held in Penang that year.",
+    "era":"2010s"
+  },
+  {
+    "year": "2011",
+    "title": "3rd Butterworth's first Founder's Award recipients",
+    "description": "The highest award attainable in the Senior Section, the Founder's Award was received by **Jocelyn Tai**, who was the Company's first ever recipient of the award. \n\n**Luke Teng**, proceeded to attained the Founder's Award in 2012",
+    "era": "2010s",
+    "images":["/headshots/oc/01_JTai.jpg", "/headshots/oc/01_LTeng.jpg"],
+    "imageLayout": "row",
+    "imageAlign": "top"
+  },
+  {
+    "year": "2014",
+    "title": "Formation of the 3rd Butterworth Company Pipe Band",
+    "description":"Through years of fundraising and sponsorship, the 3rd Butterworth Company Pipe Band was finally formed with 3 bagpipes, 1 snare drum and 1 bass drum, with the band's first performance during Enrolment Sunday on the 25th of May. \n\n**Lim Yong Fu** was appointed as the first Pipe Major of the band.",
+    "era": "2010s"
+  },
+  {
+    "year": "2015",
+    "title": "Intensive Band Training with Singapore's Finest",
+    "description": "The Pipe Band had its first intensive training with **Mdm. Yvonne Tan** from the Merlion Pipes & Drums based in Singapore. She provided invaluable training and guidance to the band members, boosting morale and confidence in the band. \n\n**Mdm. Yvonne Tan** was the pioneer of Singapore's Pipes & Drums movement and was the first Pipe Major of the Merlion Pipes & Drums.",
+    "era": "2010s",
+    "images":["/history/band-training-01.jpg", "/history/band-training-02.jpg"]
+  },
+  {
+    "year": "2017",
+    "title": "Chung Ling Centenarian Celebration Perfomance",
+    "description": "The Pipe Band had its first combined band experience with the SMJK Chung Ling Boys' Brigade Brass Band, performing the classic Highland Cathedral in the Centenarian celebration closing ceremony. \n\nThe band's second Pipe Major, **Lim Chuan Zhe**, had the honor of leading the flag march out during the flag lowering ceremony.",
+    "era": "2010s"
+  },
+  {
+    "year": "2018",
+    "title": "First National Drill Competition",
+    "description": "The Drill Team qualified for the National Drill Competition in BB Pesta 2018 after winning the 2nd Runner-up in the Penang State Council (PSC) Drill Competition. They did not disappoint and won Top 5 (Bronze Award) in the competition. \n\n **Lim Mei Qing**, the Drill Team's commander, won the Champion title in the Drill Team's commander category.",
+    "era": "2010s"
+  },
+  {
+    "year": "2019",
+    "title": "Teamwork Makes the Dream Work",
+    "description": "With several substitutions, the experienced Drill Team challenged the PSC Drill Competition once again and won the 1st Runner-up title, setting sights on bring home the champion title in 2020. \n\n**Cindy Beh** won the Drill Team's commander category, becoming our Company's first ever Champion Commander.",
+    "era": "2010s"
+  },
+  {
+    "year": "2023",
+    "title": "Robert Davis Award",
+    "description": "**Ng Zhi Hui**, who joined the Primer Section in 2020, was the Company's first Primer to receive the Robert Davis Award.",
+    "era": "2020s",
+    "image": "/history/robert-davis.JPG"
+  },
+  {
+    "year": "2023",
+    "title": "Penang State Council Drill Competition Champions",
+    "description": "The Drill Team sent in 2023 for the Penang State Council Drill Competition brought home the champion title for the first time in Company history. \n\nThe Drill Team's commander, **Kuan Chin Hou**, was also awarded 1st Runner-up in the Drill Team's commander category.",
+    "era": "2020s",
+    "image": ""
+  },
+  {
+    "year": "2024",
+    "title": "First National Dance Competition",
+    "description": "Our Company's first ever Dance Team joined the National Dance Competition organized by The Boys' Brigade in Malaysia and won 2nd Runner-up in their first debut.",
+    "era": "2020s"
+  },
+  {
+    "year": "Present",
+    "title": "Continuing the Legacy",
+    "description": "Today, we continue to nurture youth and serve the community with the same passion and dedication.",
+    "era": "Present"
+  }
+]

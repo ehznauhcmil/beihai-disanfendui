@@ -1,37 +1,226 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+const timelineEntry = await getEntry('history', 'timeline');
+
+if (!timelineEntry) {
+  throw new Error('Could not find history/timeline.json');
+}
+const rawEvents = timelineEntry.data;
+
+// Group events by era
+const eventsByEra = rawEvents.reduce((acc, event) => {
+  if (!acc[event.era]) {
+    acc[event.era] = [];
+  }
+  acc[event.era].push(event);
+  return acc;
+}, {} as Record<string, typeof rawEvents>);
+
+const eras = Object.keys(eventsByEra);
+
+function formatDescription(description: string) {
+  return description.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+}
 ---
 
-<Layout title="History - 3rd Butterworth Company">
+<Layout title="Our History | 3rd Butterworth">
   <main class="bg-white">
-    <section class="pt-24 pb-20 px-6 sm:px-8 lg:px-12 min-h-[80vh] flex items-center justify-center">
-      <div class="max-w-3xl mx-auto text-center">
-        <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gray-100 mb-8">
-          <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-          </svg>
-        </div>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
-          Our History
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6 sm:px-8 lg:px-12 text-center">
+      <div class="max-w-4xl mx-auto scroll-reveal">
+        <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
+          Our Journey
         </h1>
-        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-          This page is currently being developed. Check back soon to learn about the rich history of the 3rd Butterworth Company.
+        <p class="text-xl md:text-2xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
+          From humble beginnings to a legacy of service. Explore the milestones that define the 3rd Butterworth Company.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="/"
-            class="inline-block bg-[#0071e3] text-white px-8 py-3.5 rounded-full font-medium text-base hover:bg-[#0077ed] transition-colors duration-200 cursor-pointer"
-          >
-            Go Home
-          </a>
-          <a
-            href="/about/leadership"
-            class="inline-block bg-gray-100 text-gray-900 px-8 py-3.5 rounded-full font-medium text-base hover:bg-gray-200 transition-colors duration-200 cursor-pointer"
-          >
-            View Leadership
-          </a>
+      </div>
+    </section>
+
+    <!-- Floating Navigation -->
+    <div class="fixed bottom-8 left-0 right-0 z-50 flex justify-center pointer-events-none" id="sticky-nav">
+      <div class="bg-white/80 backdrop-blur-md border border-gray-200 shadow-lg rounded-full p-1.5 pointer-events-auto transition-all duration-300 max-w-[90vw] overflow-hidden">
+        <div class="flex flex-nowrap gap-1 overflow-x-auto no-scrollbar w-full px-2 rounded-full" id="era-nav">
+          {eras.map((era) => (
+            <a 
+              href={`#era-${era}`}
+              class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap bg-transparent text-gray-600 hover:bg-gray-100 data-[active=true]:bg-black data-[active=true]:text-white"
+              data-era={era}
+            >
+              {era}
+            </a>
+          ))}
         </div>
+      </div>
+    </div>
+
+    <!-- Timeline Section -->
+    <section class="py-24 px-4 md:px-8 overflow-hidden">
+      <div class="relative max-w-5xl mx-auto">
+        <!-- Vertical Line -->
+        <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gray-200 transform md:-translate-x-1/2"></div>
+
+        {eras.map((era) => (
+          <div id={`era-${era}`} class="era-section mb-12 scroll-reveal" data-era={era}>
+            {eventsByEra[era].map((historyEvent) => {
+              // Calculate global index for continuous alternation
+              const globalIndex = rawEvents.findIndex(e => e === historyEvent);
+              
+              return (
+                <div class={`relative flex flex-col md:flex-row items-center justify-between mb-12 ${globalIndex % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+                  
+                  <!-- Spacer for desktop layout -->
+                  <div class="hidden md:block w-[45%]"></div>
+
+                  <!-- Dot on the line -->
+                  <div class="absolute left-8 md:left-1/2 w-4 h-4 rounded-full bg-white border-4 border-[#0071e3] shadow-sm transform -translate-x-1/2 z-10 mt-1.5 md:mt-0"></div>
+
+                  <!-- Content Card -->
+                  <div class="pl-20 md:pl-0 w-full md:w-[45%]">
+                    <div class="group cursor-default">
+                      <span class="inline-block text-sm font-semibold tracking-wider text-[#0071e3] mb-3">
+                        {historyEvent.year}
+                      </span>
+                      
+                      {(historyEvent.images && historyEvent.images.length > 0) ? (
+                        <div class={`mb-6 flex gap-4 ${historyEvent.imageLayout === 'row' ? 'flex-col md:flex-row' : 'flex-col'}`}>
+                          {historyEvent.images.map((imgSrc) => (
+                            <div class={`overflow-hidden rounded-2xl shadow-md transition-transform duration-500 hover:shadow-xl ${historyEvent.imageLayout === 'row' ? 'w-full md:flex-1' : 'w-full'}`}>
+                              <img 
+                                src={imgSrc} 
+                                alt={historyEvent.title}
+                                class="w-full h-48 object-cover transform transition-transform duration-700 hover:scale-105"
+                                style={{ objectPosition: historyEvent.imageAlign || 'center' }}
+                                loading="lazy"
+                              />
+                            </div>
+                          ))}
+                        </div>
+                      ) : historyEvent.image && (
+                        <div class="mb-6 overflow-hidden rounded-2xl shadow-md transition-transform duration-500 hover:shadow-xl">
+                          <img 
+                            src={historyEvent.image} 
+                            alt={historyEvent.title}
+                            class="w-full h-48 object-cover transform transition-transform duration-700 hover:scale-105"
+                            style={{ objectPosition: historyEvent.imageAlign || 'center' }}
+                            loading="lazy"
+                          />
+                        </div>
+                      )}
+
+                      <h3 class="text-3xl font-bold text-gray-900 mb-4 group-hover:text-[#0071e3] transition-colors duration-300">
+                        {historyEvent.title}
+                      </h3>
+                      <p class="text-lg text-gray-600 leading-relaxed whitespace-pre-wrap" set:html={formatDescription(historyEvent.description)}></p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        ))}
       </div>
     </section>
   </main>
 </Layout>
+
+<style>
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  /* Apple-style scroll reveal animations */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1),
+                transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    will-change: opacity, transform;
+  }
+
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      e.preventDefault();
+      const currentTarget = e.currentTarget as HTMLAnchorElement;
+      const targetId = currentTarget.getAttribute('href')?.substring(1);
+      if (!targetId) return;
+      
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        const headerOffset = 50; 
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+
+  // Scroll Reveal Observer
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -10% 0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+  // Active Era Highlight on Scroll
+  const eraObserverOptions = {
+    root: null,
+    rootMargin: '-20% 0px -50% 0px', // Adjusted for sections
+    threshold: 0
+  };
+
+  const eraObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const era = entry.target.getAttribute('data-era');
+        if (era) {
+          updateActiveEra(era);
+        }
+      }
+    });
+  }, eraObserverOptions);
+
+  // Observe era sections
+  document.querySelectorAll('.era-section').forEach(el => eraObserver.observe(el));
+
+  function updateActiveEra(activeEra: string) {
+    document.querySelectorAll('#era-nav a').forEach(link => {
+      if (link.getAttribute('data-era') === activeEra) {
+        link.setAttribute('data-active', 'true');
+      } else {
+        link.setAttribute('data-active', 'false');
+      }
+    });
+  }
+</script>
