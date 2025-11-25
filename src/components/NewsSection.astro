@@ -1,29 +1,17 @@
 ---
+import { getCollection } from 'astro:content';
 import '../styles/global.css';
 
-const latestHighlights = [
-  {
-    title: 'Annual Camp 2024',
-    date: 'December 2024',
-    description: 'Three days of intensive training, team building, and spiritual growth at our annual camp.',
-    imageSrc: '/activities/expedition.JPG',
-    category: 'Training'
-  },
-  {
-    title: 'Community Service Day',
-    date: 'November 2024',
-    description: 'Cadets volunteered at local community centers, serving meals and organizing activities.',
-    imageSrc: '/activities/community-service.JPG',
-    category: 'Service'
-  },
-  {
-    title: 'Drill Competition',
-    date: 'October 2024',
-    description: 'Outstanding performance at the regional drill competition, securing second place.',
-    imageSrc: '/activities/drill.JPG',
-    category: 'Achievement'
-  }
-];
+// Fetch all highlights and sort by date (most recent first)
+const allHighlights = await getCollection('highlights');
+const latestHighlights = allHighlights
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 3);
+
+// Format date for display
+const formatDate = (date: Date) => {
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+};
 ---
 
 <section class="bg-gray-50 py-20 sm:py-24 lg:py-32">
@@ -38,12 +26,12 @@ const latestHighlights = [
     </div>
 
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      {latestHighlights.map(({ title, date, description, imageSrc, category }) => (
+      {latestHighlights.map((highlight) => (
         <div class="group overflow-hidden rounded-3xl bg-white transition-all duration-300 hover:shadow-2xl">
           <div class="relative h-56 w-full overflow-hidden">
             <img
-              src={imageSrc}
-              alt={title}
+              src={highlight.data.imageSrc}
+              alt={highlight.data.title}
               class="h-full w-full object-cover transition duration-700 group-hover:scale-110"
               loading="lazy"
               decoding="async"
@@ -51,7 +39,7 @@ const latestHighlights = [
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
             <div class="absolute top-4 left-4">
               <span class="inline-block px-3 py-1 text-xs font-semibold text-white bg-[#0071e3] rounded-full">
-                {category}
+                {highlight.data.category}
               </span>
             </div>
           </div>
@@ -60,10 +48,10 @@ const latestHighlights = [
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              <time>{date}</time>
+              <time>{formatDate(highlight.data.date)}</time>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
-            <p class="text-base text-gray-600 leading-relaxed">{description}</p>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">{highlight.data.title}</h3>
+            <p class="text-base text-gray-600 leading-relaxed">{highlight.data.description}</p>
           </div>
         </div>
       ))}
