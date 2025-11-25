@@ -1,29 +1,19 @@
 ---
 import '../styles/global.css';
 
+// Same content for all slides, only images change
 const slides = [
-  {
-    image: '/IMG_0427.JPG',
-    title: 'Steadfast in Faith,<br class="hidden sm:block"/> Discipline, and Service',
-    description: 'Nurturing young men through faith-based activities, disciplined training, and community service.',
-    primaryCTA: { text: 'Explore Activities', href: '/activities' },
-    secondaryCTA: { text: 'Learn More', href: '/about/company' }
-  },
-  {
-    image: '/IMG_0392.JPG',
-    title: 'Building Tomorrow\'s<br class="hidden sm:block"/> Leaders Today',
-    description: 'Empowering boys through character development, leadership skills, and meaningful community engagement.',
-    primaryCTA: { text: 'Join Us', href: '/contact' },
-    secondaryCTA: { text: 'Our Programs', href: '/activities' }
-  },
-  {
-    image: '/IMG_0427.JPG',
-    title: 'A Legacy of<br class="hidden sm:block"/> Excellence Since 1983',
-    description: 'Four decades of shaping young lives through the Boys\' Brigade movement in Butterworth.',
-    primaryCTA: { text: 'Our Story', href: '/about/history' },
-    secondaryCTA: { text: 'Achievements', href: '/about/achievements' }
-  }
+  { image: '/IMG_0427.JPG' },
+  { image: '/IMG_0392.JPG' },
+  { image: '/IMG_0427.JPG' }
 ];
+
+const content = {
+  title: 'Steadfast in Faith,<br class="hidden sm:block"/> Discipline, and Service',
+  description: 'Nurturing young men through faith-based activities, disciplined training, and community service.',
+  primaryCTA: { text: 'Explore Activities', href: '/activities' },
+  secondaryCTA: { text: 'Learn More', href: '/about/company' }
+};
 ---
 
 <section class="hero-carousel relative min-h-screen overflow-hidden bg-black">
@@ -31,46 +21,47 @@ const slides = [
   <div class="slides-container relative h-screen">
     {slides.map((slide, index) => (
       <div
-        class={`slide absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+        class={`slide absolute inset-0 ${index === 0 ? 'active' : ''}`}
         data-slide-index={index}
       >
-        <div class="absolute inset-0">
+        <div class="slide-image-wrapper absolute inset-0">
           <img
             src={slide.image}
             alt="Boys' Brigade members"
-            class="w-full h-full object-cover object-center"
+            class="slide-image w-full h-full object-cover object-center"
             loading={index === 0 ? 'eager' : 'lazy'}
           />
           <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70"></div>
         </div>
-
-        <div class="relative flex min-h-screen items-center justify-center px-6 pt-20 pb-32">
-          <div class="mx-auto max-w-5xl text-center">
-            <h1
-              class="slide-title text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight"
-              set:html={slide.title}
-            />
-            <p class="slide-description text-xl sm:text-2xl text-white/90 mb-10 leading-relaxed max-w-3xl mx-auto font-light">
-              {slide.description}
-            </p>
-            <div class="slide-cta flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href={slide.primaryCTA.href}
-                class="inline-block bg-white text-black px-8 py-3.5 rounded-full font-medium text-base hover:bg-white/90 transition-all duration-300 shadow-lg cursor-pointer transform hover:scale-105"
-              >
-                {slide.primaryCTA.text}
-              </a>
-              <a
-                href={slide.secondaryCTA.href}
-                class="inline-block bg-white/10 backdrop-blur-sm text-white border border-white/40 px-8 py-3.5 rounded-full font-medium text-base hover:bg-white/20 transition-all duration-300 cursor-pointer"
-              >
-                {slide.secondaryCTA.text}
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     ))}
+
+    <!-- Content layer (stays constant) -->
+    <div class="content-layer relative flex min-h-screen items-center justify-center px-6 pt-20 pb-32 z-10">
+      <div class="mx-auto max-w-5xl text-center">
+        <h1
+          class="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight"
+          set:html={content.title}
+        />
+        <p class="text-xl sm:text-2xl text-white/90 mb-10 leading-relaxed max-w-3xl mx-auto font-light">
+          {content.description}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a
+            href={content.primaryCTA.href}
+            class="inline-block bg-white text-black px-8 py-3.5 rounded-full font-medium text-base hover:bg-white/90 transition-all duration-300 shadow-lg cursor-pointer transform hover:scale-105"
+          >
+            {content.primaryCTA.text}
+          </a>
+          <a
+            href={content.secondaryCTA.href}
+            class="inline-block bg-white/10 backdrop-blur-sm text-white border border-white/40 px-8 py-3.5 rounded-full font-medium text-base hover:bg-white/20 transition-all duration-300 cursor-pointer"
+          >
+            {content.secondaryCTA.text}
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Navigation Dots -->
@@ -120,38 +111,64 @@ const slides = [
     transform: translateY(-50%) scale(1.05);
   }
 
-  .slide-title,
-  .slide-description,
-  .slide-cta {
-    animation: fadeInUp 0.8s ease-out forwards;
+  /* Slide transitions with Ken Burns effect */
+  .slide {
+    opacity: 0;
+    transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity;
   }
 
-  .slide-description {
-    animation-delay: 0.1s;
+  .slide.active {
+    opacity: 1;
+    z-index: 1;
   }
 
-  .slide-cta {
-    animation-delay: 0.2s;
+  .slide-image-wrapper {
+    will-change: transform;
+  }
+
+  .slide.active .slide-image {
+    animation: kenBurns 20s ease-out forwards;
+  }
+
+  @keyframes kenBurns {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.08);
+    }
+  }
+
+  /* Navigation dots */
+  .nav-dot {
+    will-change: width, background-color;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Content layer */
+  .content-layer {
+    pointer-events: none;
+  }
+
+  .content-layer a {
+    pointer-events: all;
+  }
+
+  /* Smooth entrance animation for content */
+  .content-layer > div {
+    animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s backwards;
   }
 
   @keyframes fadeInUp {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px);
     }
     to {
       opacity: 1;
       transform: translateY(0);
     }
-  }
-
-  /* Ensure smooth transitions */
-  .slide {
-    will-change: opacity;
-  }
-
-  .nav-dot {
-    will-change: width, background-color;
   }
 </style>
 
@@ -226,12 +243,11 @@ const slides = [
 
       this.isTransitioning = true;
 
-      // Update slides
-      this.slides[this.currentSlide].classList.remove('opacity-100', 'z-10');
-      this.slides[this.currentSlide].classList.add('opacity-0', 'z-0');
+      // Remove active class from current slide
+      this.slides[this.currentSlide].classList.remove('active');
 
-      this.slides[index].classList.remove('opacity-0', 'z-0');
-      this.slides[index].classList.add('opacity-100', 'z-10');
+      // Add active class to new slide
+      this.slides[index].classList.add('active');
 
       // Update dots
       this.dots[this.currentSlide].classList.remove('bg-white', 'w-8');
@@ -242,10 +258,10 @@ const slides = [
 
       this.currentSlide = index;
 
-      // Reset transition lock after animation completes
+      // Reset transition lock after animation completes (2s for smoother transition)
       setTimeout(() => {
         this.isTransitioning = false;
-      }, 1000);
+      }, 2000);
 
       // Reset autoplay timer
       this.resetAutoplay();
