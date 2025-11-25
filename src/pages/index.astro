@@ -5,30 +5,7 @@ import Hero from '../components/Hero.astro';
 import NewsSection from '../components/NewsSection.astro';
 import Testimonials from '../components/Testimonials.astro';
 import '../styles/global.css';
-
-const coreActivities = [
-  {
-    title: 'Drill & Discipline',
-    description: 'Structured drill sessions that build teamwork, precision, and respect through military-style training.',
-    href: '/activities/drill-discipline',
-    imageSrc: '/activities/drill.JPG',
-    imageAlt: 'Cadets practicing drill formation outdoors'
-  },
-  {
-    title: 'Skills & Training',
-    description: 'Comprehensive programs developing leadership, survival skills, and practical competencies.',
-    href: '/activities/skills-training',
-    imageSrc: '/activities/expedition.JPG',
-    imageAlt: 'Cadets learning essential skills during training'
-  },
-  {
-    title: 'Awards & Band',
-    description: 'Recognition programs and musical excellence that celebrate achievement and foster creativity.',
-    href: '/activities/awards-band',
-    imageSrc: '/activities/community-service.JPG',
-    imageAlt: 'Award ceremonies and band performances'
-  }
-];
+import coreActivities from '../data/core-activities.json';
 ---
 
 <Layout title="3rd Butterworth Company - Boys' Brigade Malaysia">

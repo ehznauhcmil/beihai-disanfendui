@@ -9,6 +9,8 @@ src/data/
 ├── README.md                           # This file
 ├── types.ts                            # TypeScript type definitions
 ├── highlights.json                     # News highlights and updates
+├── testimonials.json                   # Testimonials from parents and officers
+├── core-activities.json                # Main activities of the Boys' Brigade
 ├── leadership/
 │   ├── leadership-team.json            # Main leadership team members
 │   └── helpers-team.json               # Helper team members
@@ -199,6 +201,104 @@ Complete example entry:
 - Recommended size: 1200x800 pixels (3:2 aspect ratio)
 - Format: JPG (optimized for web, under 300KB)
 - Reference path: `/activities/image.jpg` (without `public` prefix)
+
+---
+
+## Managing Testimonials
+
+All testimonials displayed on the home page are managed through the `testimonials.json` file.
+
+### Adding a New Testimonial
+
+To add a new testimonial:
+
+1. Open `testimonials.json`
+2. Add a new entry to the array following this format:
+
+```json
+{
+  "quote": "Your testimonial text here. This is the main content that will be displayed.",
+  "author": "Full Name",
+  "role": "Role or Title",
+  "image": "/testimonials/photo.jpg"
+}
+```
+
+3. Place the entry in the array
+4. Save the file
+
+### Testimonial Field Descriptions
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `quote` | string | Yes | The testimonial text. Keep it concise but meaningful (2-4 sentences) |
+| `author` | string | Yes | Full name of the person giving the testimonial |
+| `role` | string | Yes | Their role or relationship (e.g., "Parent", "Training Officer", "Alumni") |
+| `image` | string | Yes | Path to profile image (relative to `/public` directory) |
+
+### Display Location
+
+- **Homepage**: All testimonials are displayed in the "What People Say" section
+- **Layout**: Grid format (2 columns on desktop, 1 column on mobile)
+
+### Editing a Testimonial
+
+1. Find the testimonial in `testimonials.json`
+2. Update any field you want to change
+3. Save the file
+
+### Removing a Testimonial
+
+1. Locate the testimonial object in the array
+2. Delete the entire object including its curly braces `{...}`
+3. Ensure proper comma placement
+4. Save the file
+
+---
+
+## Managing Core Activities
+
+The three main activity cards displayed on the home page are managed through the `core-activities.json` file.
+
+### Adding or Editing an Activity
+
+To modify an activity:
+
+1. Open `core-activities.json`
+2. Update or add entries following this format:
+
+```json
+{
+  "title": "Activity Name",
+  "description": "Brief description of the activity (1-2 sentences)",
+  "href": "/activities/activity-slug",
+  "imageSrc": "/activities/image.jpg",
+  "imageAlt": "Descriptive text for the image"
+}
+```
+
+### Core Activity Field Descriptions
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `title` | string | Yes | Name of the activity |
+| `description` | string | Yes | Brief description (1-2 sentences) displayed on the card |
+| `href` | string | Yes | Link to the detailed activity page (e.g., `/activities/drill-discipline`) |
+| `imageSrc` | string | Yes | Path to activity image (relative to `/public` directory) |
+| `imageAlt` | string | Yes | Alt text for accessibility |
+
+### Display Location
+
+- **Homepage**: Displayed in the "Our Core Activities" section
+- **Layout**: Grid format (3 columns on desktop, responsive on mobile)
+- **Order**: Activities display in the order they appear in the JSON file
+
+### Important Notes
+
+- The file currently contains 3 activities - you can add more, but the homepage layout is optimized for 3
+- Images should be placed in `/public/activities/` directory
+- Recommended image size: 1200x800 pixels (3:2 aspect ratio)
+- Format: JPG (optimized for web, under 300KB)
 
 ---
 
