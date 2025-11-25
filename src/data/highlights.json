@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "annual-camp-2024",
+    "title": "Annual Camp 2024",
+    "date": "2024-12-15",
+    "description": "Three days of intensive training, team building, and spiritual growth at our annual camp.",
+    "category": "Training",
+    "imageSrc": "/activities/expedition.JPG",
+    "featured": true,
+    "content": "Our annual camp brought together cadets from across the company for three days of intensive training, character building, and fellowship. The camp featured outdoor activities, leadership workshops, and spiritual sessions that challenged our young men to grow in faith, discipline, and service.\n\n## Highlights\n\n- Rock climbing and team building activities\n- Evening devotions and fellowship\n- Leadership training sessions\n- Survival skills workshops\n- Award ceremonies recognizing outstanding cadets\n\nThe camp was a tremendous success, with cadets leaving inspired and equipped to serve their communities better."
+  },
+  {
+    "slug": "community-service-day-2024",
+    "title": "Community Service Day",
+    "date": "2024-11-20",
+    "description": "Cadets volunteered at local community centers, serving meals and organizing activities.",
+    "category": "Service",
+    "imageSrc": "/activities/community-service.JPG",
+    "featured": true,
+    "content": "Our cadets spent a meaningful day serving the local community, demonstrating the Boys' Brigade commitment to service. They volunteered at community centers, helped serve meals to the elderly, and organized recreational activities for children.\n\n## Activities\n\n- Meal preparation and service for 100+ seniors\n- Games and activities with local children\n- Facility cleaning and maintenance\n- Donation drive for essential supplies\n\nThe day reinforced the importance of giving back and making a positive impact in our community."
+  },
+  {
+    "slug": "drill-competition-2024",
+    "title": "Drill Competition Success",
+    "date": "2024-10-25",
+    "description": "Outstanding performance at the regional drill competition, securing second place.",
+    "category": "Achievement",
+    "imageSrc": "/activities/drill.JPG",
+    "featured": true,
+    "content": "Our drill team delivered an exceptional performance at the Regional Drill Competition, securing second place among 15 competing companies. The team's precision, discipline, and teamwork were on full display.\n\n## Competition Results\n\n- **Overall Placement**: 2nd out of 15 companies\n- **Best Turned Out Squad**: 3rd place\n- **Drill Precision**: 91/100 points\n\nThe months of dedicated practice and training paid off, demonstrating the high standards our company maintains. Congratulations to all participants!"
+  },
+  {
+    "slug": "leadership-workshop-2024",
+    "title": "Leadership Development Workshop",
+    "date": "2024-09-15",
+    "description": "Senior cadets participated in an intensive leadership development workshop focused on mentorship and team management.",
+    "category": "Training",
+    "imageSrc": "/activities/expedition.JPG",
+    "featured": false,
+    "content": "Our senior cadets attended a specialized leadership workshop designed to develop their mentorship and management skills. The workshop covered communication, conflict resolution, and team building strategies.\n\n## Key Topics\n\n- Effective communication techniques\n- Conflict resolution strategies\n- Team motivation and management\n- Mentorship best practices\n- Goal setting and accountability\n\nThe workshop equipped our leaders with practical skills to better guide and support junior cadets."
+  },
+  {
+    "slug": "founder-day-2024",
+    "title": "Founder's Day Celebration",
+    "date": "2024-10-04",
+    "description": "Commemorating the founding of the Boys Brigade with a special ceremony and activities.",
+    "category": "Event",
+    "imageSrc": "/activities/drill.JPG",
+    "featured": false,
+    "content": "We celebrated Founder's Day with a special ceremony honoring the legacy of Sir William Alexander Smith and the founding of the Boys' Brigade. The event brought together current members, alumni, and church leaders.\n\n## Ceremony Highlights\n\n- Historical presentation on BB origins\n- Awards and recognitions ceremony\n- Alumni sharing sessions\n- Group photo and fellowship\n- Special service at church\n\nThe celebration reminded us of our rich heritage and continued commitment to the BB mission of nurturing young men in faith, discipline, and service."
+  }
+]
