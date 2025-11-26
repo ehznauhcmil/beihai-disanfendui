@@ -10,7 +10,7 @@ const historyCollection = defineCollection({
     image: z.string().optional(),
     images: z.array(z.string()).optional(),
     imageLayout: z.enum(['row', 'col']).optional().default('col'),
-    imageAlign: z.string().optional().default('center'),
+    imageAlign: z.union([z.string(), z.array(z.string())]).optional().default('center'),
   })),
 });
 

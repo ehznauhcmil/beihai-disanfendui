@@ -10,7 +10,9 @@
     "year": "1914",
     "title": "Passing of the Founder",
     "description": "**Sir William Alexander Smith** passed away in London on the 10th of May 1914. He was buried in Glasgow Western Necropolis, which can still be visited today in Scotland.",
-    "era": "1910s"
+    "era": "1910s",
+    "image": "/history/founder.jpg",
+    "imageAlign": "0% 25%"
   },
   {
     "year": "1916",
@@ -100,7 +102,7 @@
     "era": "2010s",
     "images":["/headshots/oc/01_JTai.jpg", "/headshots/oc/01_LTeng.jpg"],
     "imageLayout": "row",
-    "imageAlign": "top"
+    "imageAlign": ["0% 0%", "0% 10%"]
   },
   {
     "year": "2014",
